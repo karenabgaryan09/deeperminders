@@ -1,0 +1,204 @@
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: color(primary);
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 998;
+
+    & > .container-fluid {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-toggler {
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &-brand {
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    &-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        .content-collapse {
+            background-color: #fff;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        margin-right: auto;
+        .nav-link {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    form input {
+        margin-right: 5px;
+    }
+}
+
+.navbar {
+    &-dark {
+        .navbar {
+            &-brand {
+                color: #fff;
+            }
+            &-toggler {
+                color: rgba(255, 255, 255, 0.55);
+                border-color: rgba(255, 255, 255, 0.1);
+            }
+            &-nav {
+                .nav-link {
+                    color: rgba(255, 255, 255, 0.55);
+                    &.active {
+                        color: rgb(255, 255, 255);
+                    }
+                }
+            }
+        }
+    }
+    &-light {
+        .navbar {
+            &-brand {
+                color: rgba(0, 0, 0, 0.9);
+            }
+            &-toggler {
+                color: rgba(0, 0, 0, 0.55);
+                border-color: rgba(0, 0, 0, 0.1);
+            }
+            &-nav {
+                .nav-link {
+                    color: rgba(0, 0, 0, 0.55);
+                    &.active {
+                        color: rgba(0, 0, 0, 0.9);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .navbar-collapse:not(.collapsing) {
+//     height: auto !important;
+// }
+
+// .collapse:not(.show) {
+//     display: none;
+// }
+
+// .collapsing {
+//     height: 0px;
+//     overflow: hidden;
+//     transition: height 0.3s ease;
+// }
+
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        .navbar {
+            &-toggler {
+                display: none;
+            }
+            &-nav {
+                flex-direction: row;
+                .nav-link {
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                }
+            }
+            &-collapse {
+                height: auto !important;
+                display: flex !important;
+                flex-basis: auto;
+            }
+        }
+    }
+}
+
+// --------------------------  BURGER
+.navbar-toggler {
+    .burger {
+        cursor: pointer;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+        span {
+            position: absolute;
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            //    top: 9px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50rem;
+            transition: all 0.3s ease 0s;
+        }
+        &:before,
+        &:after {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            border-radius: 50rem;
+            transition: all 0.3s ease 0s;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+    }
+
+    &:not(.collapsed) {
+        .burger span {
+            transform: scale(0);
+        }
+        .burger:before {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .burger:after {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}

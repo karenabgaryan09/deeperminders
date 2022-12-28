@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sample</title>
+        <link rel="icon" href="./src/assets/images/favicon.png" />
+        <meta name="keywords" content="website, template, sample" />
+        <meta name="description" content="this sample created for prototyping purpoces" />
+        <meta name="author" content="Fiverr: karen_werner | LinkedIn https://www.linkedin.com/in/karenabgaryan09/" />
+        <!-- OPEN GRAPH -->
+        <meta property="og:title" content="Sample" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="this sample created for prototyping purposes" />
+        <meta property="og:image" content="./src/assets/images/og.png" />
+        <meta property="og:url" content="https://sample.com" />
+        <!-- TWITTER CARDS -->
+        <meta name="twitter:title" content="Sample" />
+        <meta name="twitter:description" content="this sample created for prototyping purposes" />
+        <meta name="twitter:image" content="./src/assets/images/og.png" />
+        <meta name="twitter:url" content="https://sample.com" />
+        <meta name="twitter:card" content="summary" />
+        <!-- STYLESHEET -->
+        <link rel="stylesheet" href="./src/styles/index.css" />
+        <!-- SCRIPTS -->
+        <script src="./src/scripts/script.js" defer></script>
+        <script src="./src/components/button/button.js" defer></script>
+        <script src="./src/components/navbar/navbar.js" defer></script>
+        <script src="./src/components/collapse/collapse.js" defer></script>
+        <script src="./src/components/dropdown/dropdown.js" defer></script>
+    </head>
+    <body class="scroll-content">
+        <div class="line  " >
+            <!-- <svg class="line-svg"  viewBox="0 0 248 1388" fill="none" preserveAspectRatio="xMidYMax meet">
+                <path  class="line-path"  d="M94.5 1C97.3 193 102 247 104 250M104 250L124.5 258.5L159.5 268L188.5 278.5L210.5 302.5L203 324L188.5 335.5L159.5 347.5H138L124.5 359L104 363M104 250H90.5L94.5 268L76 278.5L58.5 287.5H54L40.5 278.5H28H13.5V296.5L21 310.5L13.5 324V340H21L40.5 335.5L58.5 324L94.5 347.5L90.5 363H104M104 363L118.5 1387V737C139.667 748.167 183.3 770.5 188.5 770.5C195 770.5 242.5 807 246.5 821.5C249.7 833.1 213.833 842.333 195.5 845.5C176.333 850.167 138 859.1 138 857.5C138 855.9 122.333 841.167 114.5 834C87.3333 840.833 30.6 854.3 21 853.5C11.4 852.7 17 827.167 21 814.5L1 770.5L28 761.5L68.5 792L114.5 779V761.5V752" stroke="black"/>
+                </svg> -->
+
+            <svg class="line-svg " viewBox="0 0 25 335" fill="none" preserveAspectRatio="xMidYMax meet">
+                <path
+                    class="line-path"
+                    d="M11.5 1C12 29 12 30 11.5 30.5C11.1 30.9 8.33333 32.3333 7 33L4.5 35.5L7 39L11 40H15.1895L18.5 37.5L21.5 39L23 39.5V32.5L21 33.5L19 35L16 32.5L12 31.5L13 36L11 39.5L12.5 158.5L15.5 160L16.5 161.5L21 163L24 164.5V165.5L22.5 167L20 168.5L18 169L16.5 170.5L14.5 171.5L14.3624 169L9.5 168L7 167.5L5.5 169L3 170.5L2.5 170L3.5 166L1 159.5H2.5L4.5 161L6.5 163L7 163.5L11.5 162L12 161.5V160.5L11.5 159V158.5L12 158.837V314M12 314L14.5 320.5L22 321L16.5 326L18 333L12 329.5L6 333L7.5 326L1.5 321L9 320.5L12 314Z"
+                    stroke="black"
+                />
+            </svg>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Navbar</a>
+                <button
+                    class="navbar-toggler collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                >
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./src/pages/about/about.html  ">about</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                id="navbarDropdown"
+                                role="button"
+                                tabindex="0"
+                                data-toggle="dropdown"
+                                data-target="#navbarDropdown-1"
+                            >
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="navbarDropdown-1">
+                                <li><a class="dropdown-item" href="./fdsf" target="_blank">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                id="navbarDropdown"
+                                role="button"
+                                tabindex="0"
+                                data-toggle="dropdown"
+                                data-target="#navbarDropdown-2"
+                            >
+                                Dropdown 2
+                            </a>
+                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="navbarDropdown-2">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input
+                            class="form-control form-control-light"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="container">
+                <h1 class="display-1 hero-title">
+                    <span class="parallax" data-parallax-speed="-0.5">d</span>
+                    <span class="parallax" data-parallax-speed="-0.3">e</span>
+                    <span class="parallax" data-parallax-speed="-0.6">e</span>
+                    <span class="parallax" data-parallax-speed="-0.1">per</span>
+                    <span class="parallax" data-parallax-speed="-0.8">m</span>
+                    <span class="parallax" data-parallax-speed="-0.3">i</span>
+                    <span class="parallax" data-parallax-speed="-0.4">ne</span>
+                    <span class="parallax" data-parallax-speed="-0.3">r</span>
+                    <span class="parallax" data-parallax-speed="-0.2">s</span>
+                </h1>
+                <img class="fisherman" src="/src/assets/images/fisherman.webp" alt="" />
+                <div class="scroll">
+                    <div class="scroll-column scroll-column-1"></div>
+                    <div class="scroll-column scroll-column-2">
+                        <div class="scroll-progress">
+                            <div class="scroll-progress-bar"></div>
+                        </div>
+                        <div class="scroll-level-count"><b>1</b> / <span>9</span></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="scroll-element">
+            <section class="epipelagic">
+                <div class="container">
+                    <h2 class="about-title">epipelagic</h2>
+                </div>
+            </section>
+
+            <section class="mesopelagic">
+                <div class="container">
+                    <h2 class="about-title">mesopelagic</h2>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+
+        <!-- parallax scroll -->
+        <script src="/src/scripts/parallax-scroll.js"></script>
+        <script>
+            const parallaxScroll = new ParallaxScroll(".parallax");
+        </script>
+    </body>
+</html>
