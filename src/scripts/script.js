@@ -7,7 +7,6 @@
 
 const ParallaxOptions = (function () {
     const content = document.querySelector(".scroll-content");
-    const header = document.querySelector(".hero");
     const distanceCounter = document.querySelector(".distance-counter");
     const speed = 3;
 
@@ -19,13 +18,8 @@ const ParallaxOptions = (function () {
     const setScrollProgressBar = () => {
         let topDistance = Math.floor(-(content.getBoundingClientRect().top - window.innerHeight)).toFixed(0);
         let percentage = (topDistance * 100) / content.scrollHeight;
-        // console.log(topDistance)
         if (scrollProgressBar) scrollProgressBar.style.height = percentage + "%";
-        if (header.getBoundingClientRect().top > -400) {
-            scrollProgressBar.style.opacity = "0";
-        } else {
-            scrollProgressBar.style.opacity = "1";
-        }
+    
         const counter = ((document.documentElement.scrollTop - window.innerHeight / 2 - 100) / 10).toFixed();
         distanceCounter.innerHTML = counter + "m";
         image1.style.opacity = "0";
@@ -35,7 +29,7 @@ const ParallaxOptions = (function () {
             image3.style.opacity = "1";
         } else if (counter > 400) {
             image2.style.opacity = "1";
-        } else {
+        } else if(counter > 0){
             image1.style.opacity = "1";
         }
 
