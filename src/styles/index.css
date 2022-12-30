@@ -1185,12 +1185,8 @@ section .container > * {
   stroke: #fff;
 }
 
-.level {
-  padding-top: 100px;
-}
 .level-content {
   text-align: center;
-  padding: 100px 0;
 }
 
 .image-wrapper {
