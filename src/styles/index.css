@@ -122,8 +122,8 @@ img {
 .container,
 .container-fluid {
   width: 100%;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 80px;
+  padding-left: 80px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -395,6 +395,9 @@ img {
   top: 0;
   left: 0;
   transition: opacity 0.3s ease, height 1s ease-out;
+}
+.hero .scroll-progress-images .image-1 {
+  opacity: 0;
 }
 .hero .scroll-progress-images .image-2 {
   opacity: 0;
@@ -1137,13 +1140,7 @@ main {
   background-image: url("../assets/images/icons/ticks.svg");
   background-size: 30px;
   background-repeat: repeat-y;
-  background-position: left;
-}
-main .stick {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+  background-position: 45px;
 }
 
 section {
@@ -1158,11 +1155,22 @@ section .container > * {
   flex: 1;
 }
 
-@media screen and (min-width: 576px) {
-  main {
-    background-size: 50px;
-  }
+.units {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 3px;
+  pointer-events: none;
+  z-index: 996;
 }
+.units-item {
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.03rem;
+  height: 20px;
+}
+
 .line {
   pointer-events: none;
   width: 100%;
@@ -1175,7 +1183,7 @@ section .container > * {
 }
 .line svg {
   position: absolute;
-  left: 2%;
+  left: 5%;
   top: 0;
   height: 100vh;
   display: inline-block;

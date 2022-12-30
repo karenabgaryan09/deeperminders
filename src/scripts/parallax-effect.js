@@ -1,3 +1,6 @@
+
+
+
 const glareStyle = {
     position: "absolute",
     top: "0px",
@@ -153,3 +156,4 @@ ParallaxEffect.prototype = {
         });
     },
 };
+

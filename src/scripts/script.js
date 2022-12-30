@@ -11,6 +11,7 @@ const ParallaxOptions = (function () {
     const speed = 3;
 
     const scrollProgressBar = document.querySelector(".scroll-progress-bar");
+    const surface = document.querySelector(".scroll-progress-image.image-0");
     const image1 = document.querySelector(".scroll-progress-image.image-1");
     const image2 = document.querySelector(".scroll-progress-image.image-2");
     const image3 = document.querySelector(".scroll-progress-image.image-3");
@@ -19,9 +20,10 @@ const ParallaxOptions = (function () {
         let topDistance = Math.floor(-(content.getBoundingClientRect().top - window.innerHeight)).toFixed(0);
         let percentage = (topDistance * 100) / content.scrollHeight;
         if (scrollProgressBar) scrollProgressBar.style.height = percentage + "%";
-    
+
         const counter = ((document.documentElement.scrollTop - window.innerHeight / 2 - 100) / 10).toFixed();
         distanceCounter.innerHTML = counter + "m";
+        surface.style.opacity = '0'
         image1.style.opacity = "0";
         image2.style.opacity = "0";
         image3.style.opacity = "0";
@@ -29,8 +31,10 @@ const ParallaxOptions = (function () {
             image3.style.opacity = "1";
         } else if (counter > 400) {
             image2.style.opacity = "1";
-        } else if(counter > 0){
+        } else if (counter > 0) {
             image1.style.opacity = "1";
+        } else {
+            surface.style.opacity = '1'
         }
 
         if (counter > 6000) {
@@ -66,7 +70,6 @@ window.addEventListener("scroll", (e) => {
     let scrollPersentage =
         (document.documentElement.scrollTop + document.body.scrollTop) /
         (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-    console.log(scrollPersentage);
 
     let drawLength = pathLength * scrollPersentage;
 
@@ -80,3 +83,18 @@ window.addEventListener("scroll", (e) => {
 // console.log(progressHeight)
 // console.log(((1000 / progressHeight) * 100).toFixed())
 // console.log(((9 / 100) * progressHeight).toFixed())
+
+
+
+const createUnits = (function(){
+
+    const units = document.querySelector(".units");
+    
+    let unitsItems = "";
+    Array(11000)
+        .fill("")
+        .forEach((item, index) => {
+            if (index % 2 == 0) unitsItems += `<div class="units-item">${index}</div>`;
+        });
+    units.innerHTML += `<div class="units">${unitsItems}</div>`;
+})()
