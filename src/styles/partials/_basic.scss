@@ -11,10 +11,12 @@
 ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
-    background-color: rgba(0, 0, 0, 0.05);
+    // background-color: rgba(0, 0, 0, 0.05);
+    background-color: color(primary);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1);
+    // background-color: rgba(0, 0, 0, 0.1);
+    background-color: #2a2a72;
     &:hover {
         background-color: rgba(0, 0, 0, 0.2);
     }
@@ -25,7 +27,7 @@
 
 html {
     // @include mq(1920px) {}//default 16px
-
+    scroll-behavior: smooth;
     @include mq(2560px) {
         font-size: calc(16 * 100 / (1920 * 100 / 2560)) + px; //2k
     }
@@ -35,7 +37,7 @@ html {
 }
 
 body {
-
+    // background-color: #000;
     font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
         "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -63,7 +65,10 @@ code {
     font-weight: 600;
 }
 .display-2 {
-    font-size: calc(1.575rem + 3.9vw);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #064273;
+    max-width: 700px;
 }
 .display-3 {
     font-size: calc(1.525rem + 3.3vw);
@@ -75,14 +80,17 @@ code {
     font-size: calc(1.425rem + 2.1vw);
 }
 .display-6 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: 1rem;
+    font-weight: 200;
+    color: #fff;
+    max-width: 700px;
 }
 @media (min-width: 1200px) {
     .display-1 {
         font-size: 5rem;
     }
     .display-2 {
-        font-size: 4.5rem;
+        font-size: 2rem;
     }
     .display-3 {
         font-size: 4rem;
@@ -93,9 +101,9 @@ code {
     .display-5 {
         font-size: 3rem;
     }
-    .display-6 {
-        font-size: 2.5rem;
-    }
+    // .display-6 {
+    //     font-size: 2.5rem;
+    // }
 }
 
 li {
@@ -115,11 +123,10 @@ img {
 .container,
 .container-fluid {
     width: 100%;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    padding-right:40px;
+    padding-left: 40px;
     margin-right: auto;
     margin-left: auto;
-   
 }
 
 .container {
@@ -132,7 +139,7 @@ img {
     // @include mq(992px) {
     //     max-width: 960px; // 32
     // }
-     @include mq(768px){
+    @include mq(768px) {
         padding-right: 80px;
         padding-left: 80px;
     }
@@ -278,46 +285,6 @@ img {
 //     }
 // }
 
-body {
-    background-image: linear-gradient(180deg, #fff -31%, #009FFD 15%, #2A2A72 64%, #000 84%);
-}
-
-main {
-}
-
-section {
-    padding: 2rem 0;
-    min-height: 2000px;
-}
-
-@include mq(breakpoint(sm)) {
-    section {
-        padding: 4rem 0;
-    }
-}
 
 
-body {
-    position: relative !important;
-}
 
-.line {
-    pointer-events: none;
-    // width: 100px;
-    width: 100%;
-    height: 100vh;
-    left: 0%;
-    // top: 759px;
-    top: 0;
-    position: fixed;
-    overflow: hidden;
-   svg {
-    position: absolute;
-    left: 7.9%;
-    top: 0;
-    height: 100vh;
-    display: inline-block;
-    path {
-    }
-   }
-}

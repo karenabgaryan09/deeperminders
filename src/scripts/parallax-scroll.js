@@ -1,7 +1,7 @@
 function ParallaxScroll(target, {} = {}) {
     this.targets = document.querySelectorAll(target)
     this.setEvents();
-    // this.init();
+    this.init();
 }
 
 ParallaxScroll.prototype = {

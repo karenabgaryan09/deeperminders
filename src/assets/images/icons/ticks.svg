@@ -1,0 +1,29 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 288" width="33" height="288">
+	<title>ticks-svg</title>
+	<style>
+		.s0 { fill: none } 
+		.s1 { fill: none;stroke: #ffffff;stroke-width: .8 } 
+		.s2 { fill: none;stroke: #ffffff;stroke-width: .5 } 
+	</style>
+	<path id="Layer" class="s0" d="m33 0.1v288.4h-33v-288.3z"/>
+	<path id="Layer" class="s1" d="m33 0.7h-33"/>
+	<path id="Layer" class="s2" d="m21 29.2h-21"/>
+	<path id="Layer" class="s2" d="m21 14.9h-21"/>
+	<path id="Layer" class="s2" d="m21 57h-21"/>
+	<path id="Layer" class="s2" d="m21 43.3h-21"/>
+	<path id="Layer" class="s2" d="m21 73h-21"/>
+	<path id="Layer" class="s2" d="m21 86.8h-21"/>
+	<path id="Layer" class="s2" d="m21 115.7h-21"/>
+	<path id="Layer" class="s2" d="m21 102h-21"/>
+	<path id="Layer" class="s1" d="m21 144h-21"/>
+	<path id="Layer" class="s2" d="m21 129.9h-21"/>
+	<path id="Layer" class="s2" d="m21 160.2h-21"/>
+	<path id="Layer" class="s2" d="m21 188h-21"/>
+	<path id="Layer" class="s2" d="m21 173.4h-21"/>
+	<path id="Layer" class="s2" d="m21 201.8l-21-0.1"/>
+	<path id="Layer" class="s2" d="m21 230.1h-21"/>
+	<path id="Layer" class="s2" d="m21 215.9h-21"/>
+	<path id="Layer" class="s2" d="m21 245.9h-21"/>
+	<path id="Layer" class="s2" d="m21 260.1h-21"/>
+	<path id="Layer" class="s2" d="m21 275h-21"/>
+</svg>

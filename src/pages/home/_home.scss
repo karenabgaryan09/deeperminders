@@ -1,10 +1,196 @@
-// HOME PAGE
+body {
+    background-color: #000;
 
-.epipelagic {
-    // background-color: color(primary,0.5);
-//  background-image: linear-gradient(180deg, #009FFD -50%, #2A2A72 39%);
+    background-image: linear-gradient(180deg, #fff -31%, #009ffd 15%, #2a2a72 64%, #000 84%);
 }
-.mesopelagic {
-    // background-color: color(primary,0.8);
 
+main {
+    position: relative;
+    background-image: url("../assets/images/icons/ticks.svg");
+    background-size: 30px;
+    background-repeat: repeat-y;
+    background-position: left;
+    .stick {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+}
+
+section {
+    // padding: 2rem 0;
+    // min-height: 2000px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    .container {
+
+        display: flex;
+        flex-direction: column; 
+        height: 100%;
+        & > * {
+            flex: 1;
+        }
+    }
+}
+
+@include mq(breakpoint(sm)) {
+    main {
+        background-size: 50px;
+    }
+    section {
+        // padding: 4rem 0;
+    }
+}
+
+.line {
+    pointer-events: none;
+    // width: 100px;
+    width: 100%;
+    height: 100vh;
+    left: 0%;
+    // top: 759px;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    z-index: 2;
+    svg {
+        position: absolute;
+        left: 3%;
+        top: 0;
+        height: 100vh;
+        display: inline-block;
+        path {
+            stroke: #fff;
+        }
+    }
+}
+
+.level {
+    // min-height: 700px;
+    padding-top: 100px;
+    &-content {
+        text-align: center;
+        padding: 100px 0;
+    }
+}
+
+.image-wrapper {
+    display: inline-block;
+}
+.image {
+    display: inline-block;
+    transform-style: preserve-3d;
+    padding: 30px;
+    border-radius: 10px;
+    &:hover {
+        z-index: 1;
+        img {
+            transform: translateZ(50px);
+            filter: drop-shadow(0 10px 3px rgba(0, 0, 0, 0.3));
+        }
+        .image {
+            &-name {
+                transform: translateZ(50px);
+            }
+        }
+    }
+    img {
+        display: block;
+        width: 100%;
+        width: 200px;
+        height: 100px;
+        object-fit: contain;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s ease;
+    }
+    &-name {
+        text-align: left;
+        color: #fff;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        transition: transform 0.3s ease;
+    }
+}
+
+.sup-title {
+    padding: 20px;
+    color: #00ff8c;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+
+// Epipelagic 0m - 200m         = 200
+// Mesopelagic 200m - 1000m     = 800
+// Bathypelagic 1000m - 4000m   = 3000
+// Abyssopelagic 4000m - 6000m  = 2000
+// Hadalpelagic 6000m - 11000m  = 5000
+// 100px = 1m
+
+section {
+    position: relative;
+    &:before {
+        font-size: 0.8rem;
+        position: absolute;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        background-color: #00ff8c;
+        top: 0;
+        left: 0;
+    }
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     transform: translateY(-50%);
+    //    height: 30px;
+    //    width: 100px;
+    //    background-color: color(primary);
+    //     // background-color: #00ff8c;
+    //     top: 0;
+    //     right: 0;
+    // }
+}
+
+#epipelagic {
+    height: calc(200 * 10px);
+    &:before {
+        content: "surface";
+    }
+}
+#mesopelagic {
+    height: calc(800 * 10px);
+    &:before {
+        content: "200m";
+    }
+}
+#bathypelagic {
+    height: calc(3000 * 10px);
+    &:before {
+        content: "1000m";
+    }
+}
+#abyssopelagic {
+    height: calc(2000 * 10px);
+    &:before {
+        content: "4000m";
+    }
+}
+#hadalpelagic {
+    height: calc(5000 * 10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 15px;
+    &:before {
+        content: "6000m";
+    }
+    &:after {
+        content: "11000m";
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        transform: translateY(50%);
+        background-color: #00ff8c;
+    }
 }

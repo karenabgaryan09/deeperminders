@@ -29,24 +29,29 @@
         <script src="./src/components/navbar/navbar.js" defer></script>
         <script src="./src/components/collapse/collapse.js" defer></script>
         <script src="./src/components/dropdown/dropdown.js" defer></script>
+        <script src="./src/components/drawer/drawer.js" defer></script>
+        <script src="./src/scripts/lazy-load/lazy-load.js" defer></script>
     </head>
-    <body class="scroll-content">
-        <div class="line  " >
+    <body>
+        <div class="line">
             <!-- <svg class="line-svg"  viewBox="0 0 248 1388" fill="none" preserveAspectRatio="xMidYMax meet">
                 <path  class="line-path"  d="M94.5 1C97.3 193 102 247 104 250M104 250L124.5 258.5L159.5 268L188.5 278.5L210.5 302.5L203 324L188.5 335.5L159.5 347.5H138L124.5 359L104 363M104 250H90.5L94.5 268L76 278.5L58.5 287.5H54L40.5 278.5H28H13.5V296.5L21 310.5L13.5 324V340H21L40.5 335.5L58.5 324L94.5 347.5L90.5 363H104M104 363L118.5 1387V737C139.667 748.167 183.3 770.5 188.5 770.5C195 770.5 242.5 807 246.5 821.5C249.7 833.1 213.833 842.333 195.5 845.5C176.333 850.167 138 859.1 138 857.5C138 855.9 122.333 841.167 114.5 834C87.3333 840.833 30.6 854.3 21 853.5C11.4 852.7 17 827.167 21 814.5L1 770.5L28 761.5L68.5 792L114.5 779V761.5V752" stroke="black"/>
                 </svg> -->
 
-            <svg class="line-svg " viewBox="0 0 25 335" fill="none" preserveAspectRatio="xMidYMax meet">
+            <!-- <svg class="line-svg" viewBox="0 0 25 335" fill="none" preserveAspectRatio="xMidYMax meet">
                 <path
                     class="line-path"
                     d="M11.5 1C12 29 12 30 11.5 30.5C11.1 30.9 8.33333 32.3333 7 33L4.5 35.5L7 39L11 40H15.1895L18.5 37.5L21.5 39L23 39.5V32.5L21 33.5L19 35L16 32.5L12 31.5L13 36L11 39.5L12.5 158.5L15.5 160L16.5 161.5L21 163L24 164.5V165.5L22.5 167L20 168.5L18 169L16.5 170.5L14.5 171.5L14.3624 169L9.5 168L7 167.5L5.5 169L3 170.5L2.5 170L3.5 166L1 159.5H2.5L4.5 161L6.5 163L7 163.5L11.5 162L12 161.5V160.5L11.5 159V158.5L12 158.837V314M12 314L14.5 320.5L22 321L16.5 326L18 333L12 329.5L6 333L7.5 326L1.5 321L9 320.5L12 314Z"
                     stroke="black"
                 />
-            </svg>
+            </svg> -->
+            <svg class="line-svg" viewBox="0 0 381 5873"  fill="none" preserveAspectRatio="xMidYMax meet">
+                <path class="line-path" d="M213 0.5V1653.5L196 1651.5C182 1651.5 149.5 1657.8 143.5 1669C137.5 1680.2 137.333 1679 138 1677V1683V1685.5V1688L140.5 1691V1692.5L142 1694H143.5C143.5 1694.83 143.8 1696.6 145 1697C146.2 1697.4 148.5 1699.17 149.5 1700L153.5 1702.5H156L159 1705L165 1707H167L170 1709H174.5L179 1711H181C181.167 1711 181.8 1711 183 1711C184.5 1711 185 1711 187.5 1711C189.5 1711 191 1712.33 191.5 1713L194 1711L199.5 1713L207 1711L211.5 1709H216L219.5 1707L225 1705C226.333 1704.17 229.2 1702.5 230 1702.5C230.8 1702.5 233 1700.83 234 1700L236.5 1697L240.5 1700H242.5C243.167 1700.83 244.8 1702.5 246 1702.5C247.2 1702.5 249.5 1704.17 250.5 1705C251.5 1705.67 253.9 1707 255.5 1707C257.1 1707 260.167 1707 261.5 1707L264.5 1709C265 1709 266.3 1709 267.5 1709C268.7 1709 270.667 1709 271.5 1709V1651.5L267.5 1653.5L263 1655H257.5L255.5 1657H252.5L250.5 1659C240.5 1664.6 235.333 1664 234 1663H230V1661H227.5L225 1659H219.5L214.5 1657V3125L207.5 3123.5H203L199 3122C199 3122 198.5 3122 196.5 3122C194.5 3122 193 3122 192.5 3122L190.5 3121H189L190.5 3123.5L191.5 3126C191.167 3126.33 190.7 3127.2 191.5 3128C192.3 3128.8 192.5 3130 192.5 3130.5L194 3133C194 3134.2 194 3135.83 194 3136.5V3138V3139V3141L193.5 3141.5V3144L192.5 3145.5L191.5 3147V3148.5L190.5 3149.5V3150.5V3151.17C190.5 3151.17 190.2 3151.17 189 3151.17C188.667 3151.61 187.7 3152.5 186.5 3152.5C185 3152.5 185.5 3152.5 183 3152.5C181 3152.5 178.5 3153.5 177.5 3154L118.5 3165.5C100.5 3150.83 60.2 3123.3 43 3130.5C51 3145.7 65.3333 3171.5 71.5 3182.5L57.5 3220C66.6667 3218.17 86 3214 90 3212C94 3210 109.667 3198.5 117 3193C144 3199.33 204.9 3212 232.5 3212C233.3 3225.6 233.5 3230 233.5 3230.5C244.667 3229.33 268.5 3223.6 274.5 3210C311.7 3202.4 321.667 3200.17 322 3200C315 3196.33 296.2 3189 277 3189C257.8 3189 286 3187.67 302.5 3187C313.333 3187.33 336.2 3189.2 341 3194C353.5 3188 358 3186.5 366.5 3176C365.7 3173.2 362.833 3171.17 361.5 3170.5C344.667 3163.5 300.3 3149.5 257.5 3149.5C255.5 3147 225.5 3126 219 3126C213.8 3126 216.833 3765.67 219 4085.5L247 4082L237.5 4074L231.5 4062.5V4054V4045L237.5 4041.5C238.333 4040.83 240.4 4039.5 242 4039.5C244 4039.5 247.5 4039.5 249 4039.5C250.5 4039.5 252.5 4038 255 4041.5C257 4044.3 262.833 4046.67 265.5 4047.5L270 4050.5H275.5H282.5C282.667 4050.5 283.5 4050.5 285.5 4050.5C287.5 4050.5 291.667 4050.5 293.5 4050.5L297.5 4047.5C298.167 4047.33 299.8 4046.6 301 4045C302.5 4043 304.5 4041.5 306 4041.5C307.5 4041.5 308 4039.5 309.5 4039.5C311 4039.5 317 4039.5 318.5 4039.5C319.7 4039.5 321.667 4039.5 322.5 4039.5L324 4039C324.5 4038.67 325.7 4038.7 326.5 4041.5C327.3 4044.3 329.833 4048.67 331 4050.5C331 4050.67 331 4051.9 331 4055.5C331 4059.1 328 4065.67 326.5 4068.5L324 4074L321 4078L318.5 4082L315.5 4085.5L314.5 4087C312.833 4088 309.5 4090.1 309.5 4090.5C309.5 4091 308 4092 306 4092.5C304.4 4092.9 302 4094.33 301 4095C298.667 4123.67 286.1 4188.9 254.5 4220.5C254.5 4222.5 254.5 4236 254.5 4237.5C254.5 4239 256 4258.5 237 4277.5C236 4278.5 222 4290.5 211.5 4280C210.5 4279 198.5 4269 197.5 4268C196.5 4267 189.5 4256.5 189.5 4254.5C189.5 4252.9 183.833 4254.5 181 4255.5L178 4263L173.5 4269.5L170 4272H164.5L161 4269.5C160.667 4269 159.8 4268 159 4268C158 4268 158 4267.5 157 4266.5C153.4 4261.7 151.833 4259.5 151.5 4259L150.5 4258H149.5C84 4264.33 -35.3 4243.6 11.5 4110C15.1 4105.6 20.6667 4103.83 23 4103.5C82.5 4101.67 204.1 4096.5 214.5 4090.5C224.9 4084.5 218.833 5118.33 214.5 5636L234 5652.5L249.5 5607L267.5 5646C282.333 5645.33 313.7 5647.5 320.5 5661.5C321.167 5650 323.6 5625.2 328 5618C329.5 5611.17 335.7 5597.5 348.5 5597.5C351.167 5596.33 357.5 5595.9 361.5 5603.5C366.167 5607.83 374.8 5620.4 372 5636C373.2 5636 375.167 5638 376 5639L377.5 5641.5C377.833 5642.33 378.5 5644.1 378.5 5644.5C378.5 5644.9 378.833 5646 379 5646.5C379.167 5646.67 379.5 5647.2 379.5 5648C379.5 5649 380 5649.5 380 5650.5C380 5651.5 380 5651.5 380 5652.5C380 5653.3 380 5654.17 380 5654.5V5656L378.5 5658.5V5659.5C378.333 5659.83 377.9 5660.5 377.5 5660.5C377.1 5660.5 376.333 5661.5 376 5662C375.833 5662 375.4 5662.1 375 5662.5C370.5 5665 370.5 5665 369.5 5665.5C366.5 5665.5 367.5 5665.5 365.5 5665.5C358.5 5662.5 357.5 5663.5 357 5662C355 5659.5 355 5660 354.5 5658C352.5 5655 353 5656.5 352.5 5654.5C352.5 5649.5 352.5 5649.5 352.5 5648C352.5 5646.5 352.5 5646.5 352.5 5645.5C353.5 5643.5 354 5643 354.5 5642.5C355 5642 355.5 5642.5 356 5641.5C357.5 5639.5 358 5640 358.5 5639C359 5638 359 5637.5 359.5 5637C360 5636.5 360 5609.5 348.5 5609.5C342.5 5614.5 330.7 5634 331.5 5672C339.667 5679.33 358.2 5698.7 367 5717.5C375.8 5736.3 378.333 5742.33 378.5 5743L379.5 5745.5L302.5 5853L252.5 5824L217 5871L220.5 5839.5H189L208 5824L186 5815.5L217 5802.5L164.5 5775.5L101.5 5819L125 5779L103 5777.5L125 5751L98 5700.5L154 5731.5L186 5695L177 5675H204.5V5633" stroke="black"/>
+                </svg>
+                
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">Navbar</a>
                 <button
                     class="navbar-toggler collapsed"
                     type="button"
@@ -60,11 +65,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./index.html">Home</a>
+                            <a class="nav-link active" href="/">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./src/pages/about/about.html  ">about</a>
-                        </li>
+
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
@@ -74,13 +77,33 @@
                                 data-toggle="dropdown"
                                 data-target="#navbarDropdown-1"
                             >
-                                Dropdown
+                                epipelagic
                             </a>
                             <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="navbarDropdown-1">
-                                <li><a class="dropdown-item" href="./fdsf" target="_blank">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#sand">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/sand.png" alt="" />
+                                        </div>
+                                        sand</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#silt">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/silt.webp" alt="" />
+                                        </div>
+                                        silt</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#tuna">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/tuna.png" alt="" />
+                                        </div>
+                                        tuna</a
+                                    >
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -92,75 +115,514 @@
                                 data-toggle="dropdown"
                                 data-target="#navbarDropdown-2"
                             >
-                                Dropdown 2
+                                mesopelagic
                             </a>
                             <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="navbarDropdown-2">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#/">swordfish</a></li>
+                                <li><a class="dropdown-item" href="#/">shrimp</a></li>
+                                <li><a class="dropdown-item" href="#/">hatchet</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
                     </ul>
-                    <form class="d-flex">
-                        <input
-                            class="form-control form-control-light"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
-        <header class="hero">
+        <header class="hero" data-lazy-block>
             <div class="container">
-                <h1 class="display-1 hero-title">
-                    <span class="parallax" data-parallax-speed="-0.5">d</span>
-                    <span class="parallax" data-parallax-speed="-0.3">e</span>
-                    <span class="parallax" data-parallax-speed="-0.6">e</span>
-                    <span class="parallax" data-parallax-speed="-0.1">per</span>
-                    <span class="parallax" data-parallax-speed="-0.8">m</span>
-                    <span class="parallax" data-parallax-speed="-0.3">i</span>
-                    <span class="parallax" data-parallax-speed="-0.4">ne</span>
-                    <span class="parallax" data-parallax-speed="-0.3">r</span>
-                    <span class="parallax" data-parallax-speed="-0.2">s</span>
-                </h1>
-                <img class="fisherman" src="/src/assets/images/fisherman.webp" alt="" />
+                <h1 class="display-1 hero-title parallax" data-parallax-speed="-0.6">deeperminers</h1>
+                <img class="ship" data-lazy="fade-right" src="/src/assets/images/ship.png" alt="" />
                 <div class="scroll">
+                    <div class="distance-counter"></div>
+                    <div class="image-wrapper">
+                        <img class="scroll-indicator" src="/src/assets/images/icons/ticks.svg" alt="" />
+                        <img class="scroll-indicator" src="/src/assets/images/icons/ticks.svg" alt="" />
+                    </div>
                     <div class="scroll-column scroll-column-1"></div>
                     <div class="scroll-column scroll-column-2">
                         <div class="scroll-progress">
-                            <div class="scroll-progress-bar"></div>
+                            <div class="layers">
+                                <div class="layer layer-epipelagic">200m</div>
+                                <div class="layer layer-mesopelagic">1000m</div>
+                                <div class="layer layer-bathypelagic">4000m</div>
+                                <div class="layer layer-abyssopelagic">6000m</div>
+                                <div class="layer layer-hadalpelagic">11000m</div>
+                            </div>
+                            <div class="scroll-progress-bar">
+                               <div class="scroll-progress-images">
+                                 <div class="scroll-progress-image image-1">
+                                     <img src="/src/assets/images/icons/diver-3.png" alt="" />
+                                 </div>
+                                 <div class="scroll-progress-image image-2">
+                                     <img src="/src/assets/images/icons/diver-4.png" alt="" />
+                                 </div>
+                                 <div class="scroll-progress-image image-3">
+                                     <img src="/src/assets/images/icons/submarine.png" alt="" />
+                                 </div>
+                               </div>
+                            </div>
                         </div>
-                        <div class="scroll-level-count"><b>1</b> / <span>9</span></div>
+                        <div class="scroll-level-count"><b class="level-count">1</b> / <span>5</span></div>
+                        <button class="btn btn-primary" data-target="#drawer-right" data-toggle="drawer">
+                            zones
+                        </button>
+                    </div>
+                </div>
+                <div class="drawer drawer-right" id="drawer-right">
+                    <div class="zones">
+                        <div class="zone zone-epipelagic">
+                            <div class="zone-name">epipelagic</div>
+                            <div class="zone-depth">200m</div>
+                        </div>
+                        <div class="zone zone-mesopelagic">
+                            <div class="zone-name">mesopelagic</div>
+                            <div class="zone-depth">1000m</div>
+                        </div>
+                        <div class="zone zone-bathypelagic">
+                            <div class="zone-name">bathypelagic</div>
+                            <div class="zone-depth">4000m</div>
+                        </div>
+                        <div class="zone zone-abyssopelagic">
+                            <div class="zone-name">abyssopelagic</div>
+                            <div class="zone-depth">6000m</div>
+                        </div>
+                        <div class="zone zone-hadalpelagic">
+                            <div class="zone-name">hadalpelagic</div>
+                            <div class="zone-depth">11000m</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="scroll-element">
-            <section class="epipelagic">
+        <main class="scroll-element scroll-content">
+            <!-- <section class="epipelagic" id="epipelagic" style="border: 1px solid green">
                 <div class="container">
-                    <h2 class="about-title">epipelagic</h2>
+                    <div class="level level-0 title-wrapper" data-lazy-block style="height: 2100px;">
+                        <h5 class="display-6 sup-title">epipelagic</h5>
+                        <h2 class="display-2" data-lazy="fade-up">
+                            You are in the Epipelagic zone which extends down 200 meters
+                        </h2>
+                    </div>
+                    <div class="level level-1" data-lazy-block id="sand" style="height: 1600px;">
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You dredged some sand that can be sold for construction purposes.
+                        </h3>
+                        <div class="level-content">
+                            <div class="parallax">
+                                <div class="image-wrapper parallax" data-parallax data-lazy="fade-up">
+                                    <div class="image" data-parallax-inner data-parallax-glare="true">
+                                        <img src="/src/assets/images/minerals/sand.png" alt="" />
+                                        <div class="image-name">sand</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level level-2" data-lazy-block id="tuna" style="height: 1900px;">
+                        <h3 class="display-6" data-lazy="fade-up">A prized tuna just swam by.</h3>
+                        <div class="level-content">
+                            <div class="parallax">
+                                <div class="image-wrapper parallax" data-parallax data-lazy="fade-up">
+                                    <div class="image" data-parallax-inner data-parallax-glare="true">
+                                        <img src="/src/assets/images/minerals/tuna.png" alt="" />
+                                        <div class="image-name">tuna</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level level-3" data-lazy-block id="silt" style="height: 2400px;">
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You dredged some silt and mud that can be sold for construction purposes.
+                        </h3>
+                        <div class="level-content">
+                            <div class="parallax">
+                                <div class="image-wrapper parallax" data-parallax data-lazy="fade-up">
+                                    <div class="image" data-parallax-inner data-parallax-glare="true">
+                                        <img src="/src/assets/images/minerals/silt.webp" alt="" />
+                                        <div class="image-name">silt</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level level-4" data-lazy-block style="height: 12000px;">
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You found a seabed with mineral rich sands with ilmenite and diamonds mixed in.
+                        </h3>
+                    </div>
+                </div>
+            </section> -->
+            <section class="epipelagic" id="epipelagic" style="border: 1px solid green">
+                <div class="container">
+                    <div class="level level-0 title-wrapper" data-lazy-block>
+                        <h5 class="display-6 sup-title">epipelagic</h5>
+                        <h2 class="display-2" data-lazy="fade-up">
+                            You are in the Epipelagic zone which extends down 200 meters
+                        </h2>
+                    </div>
+                    <div class="level level-1" data-lazy-block id="sand">
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You dredged some sand that can be sold for construction purposes.
+                        </h3>
+                        <div class="level-content">
+                            <div class="parallax">
+                                <div class="image-wrapper parallax" data-parallax data-lazy="fade-up">
+                                    <div class="image" data-parallax-inner data-parallax-glare="true">
+                                        <img src="/src/assets/images/minerals/sand.png" alt="" />
+                                        <div class="image-name">sand</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level level-2" data-lazy-block id="tuna" >
+                        <h3 class="display-6" data-lazy="fade-up">A prized tuna just swam by.</h3>
+                        <div class="level-content">
+                            <div class="parallax">
+                                <div class="image-wrapper parallax" data-parallax data-lazy="fade-up">
+                                    <div class="image" data-parallax-inner data-parallax-glare="true">
+                                        <img src="/src/assets/images/minerals/tuna.png" alt="" />
+                                        <div class="image-name">tuna</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level level-3" data-lazy-block id="silt" >
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You dredged some silt and mud that can be sold for construction purposes.
+                        </h3>
+                        <div class="level-content">
+                            <div class="parallax">
+                                <div class="image-wrapper parallax" data-parallax data-lazy="fade-up">
+                                    <div class="image" data-parallax-inner data-parallax-glare="true">
+                                        <img src="/src/assets/images/minerals/silt.webp" alt="" />
+                                        <div class="image-name">silt</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You found a seabed with mineral rich sands with ilmenite and diamonds mixed in.
+                        </h3>
+                    </div>
                 </div>
             </section>
 
-            <section class="mesopelagic">
+            <section class="mesopelagic" id="mesopelagic">
                 <div class="container">
-                    <h2 class="about-title">mesopelagic</h2>
+                    <div class="title-wrapper level level-0" data-lazy-block>
+                        <h5 class="display-6 sup-title">mesopelagic</h5>
+                        <h2 class="display-2" data-lazy="fade-up">
+                            You are in the Mesopelagic zone which extends from 201 - 1000 meters
+                        </h2>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            swordfish, shrimp, and hatchet fish are swiming around
+                        </h3>
+                    </div>
                 </div>
             </section>
+
+            <section class="bathypelagic" id="bathypelagic">
+                <div class="container">
+                    <div class="title-wrapper level level-0" data-lazy-block>
+                        <h5 class="display-6 sup-title">bathypelagic</h5>
+                        <h2 class="display-2" data-lazy="fade-up">
+                            You are in the Bathypelagic zone which extends from 1000-4000 meters. This is where the
+                            ocean becomes pitch black and at a constant near freezing temperature, 39F. The pressure is
+                            now 5850 pounds per square inch. By comparison, an alligator, which has the strongest bite
+                            force known to man, is only at 2000 pounds per square inch.
+                        </h2>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">An angular fish just swam by</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">There is a giant squid</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">A tripod fish loves the deep water</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            Active and extinct hydrothermal vents begin here and go down to 3700 meters. Their sulfide
+                            deposits contain minerals that can be mined.
+                        </h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            "You found some gold - there is an estimated $150 trillion worth of gold down here so keep
+                            mining!"
+                        </h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found silver!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found copper!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found manganese!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You are at 1 mile deep</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found some lead!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more lead!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found zinc!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more lead!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found lithium!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more gold!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more silver!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more zinc!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more cobalt!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more lithium!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more manganese!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You found a huge trove of copper, nickel, cobalt, iron, manganese, and rare earth elements
+                        </h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found nickel!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more gold!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found titanium!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more nickel!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more silver!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found rare earth elements!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more copper!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more titanium!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more rare earth elements!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more zinc!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found platinum!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more cobalt!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more rare earth elements!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more platinum!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more manganese!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You are at 2 miles deep</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more gold!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more nickel!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more platinum!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more zinc!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more platinum!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more rare earth elements!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            This is generally where most deep sea mining stops, but mining can go as deep as 6500
+                            meters.
+                        </h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More titanium !</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More zinc!</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="abyssopelagic" id="abyssopelagic">
+                <div class="container">
+                    <div class="title-wrapper level level-0" data-lazy-block>
+                        <h5 class="display-6 sup-title">abyssopelagic</h5>
+                        <h2 class="display-2" data-lazy="fade-up">
+                            You are in the Abyssopelagic Zone which extends from 4000 to 6000 meters.
+                        </h2>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More nickel!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More zinc!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More copper!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More gold!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You are at 3 miles deep</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More cobalt!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You've reached the bottom of the Clipperton Fracture Zone, a region in the central Pacific
+                            where 19 deep sea mining exploratory licenses have been granted by the International Seabed
+                            authority to search for potato sized polymetallic nodules.
+                        </h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More cobalt!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More titanium!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More copper!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More manganese!</h3>
+                    </div>
+                    <div class="level level-1" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More rare earth metals!</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hadalpelagic" id="hadalpelagic">
+                <div class="container">
+                    <div class="level level-0 title-wrapper" data-lazy-block>
+                        <h5 class="display-6 sup-title">hadalpelagic</h5>
+                        <h2 class="display-2" data-lazy="fade-up">
+                            You are in the Hadalpelagic Zone which extends from 4000 meters to the bottom of the ocean.
+                            The pressure is immense at 8 tons per sq / in, yet life (single celled plankton) has been
+                            found here.
+                        </h2>
+                    </div>
+
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More nickel!</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">More lithium!</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found more lead.</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You are at 4 miles deep</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You found the last bits of gold, platinum and silver. Nice going, you are almost at the
+                            limit of where deep sea mining can go.
+                        </h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">This is the limit to deep sea mining.</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You are at 5 miles deep</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">This is the height of Mt. Everest!</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You are at 6 miles deep</h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            This is the depth James Cameron landed at in his submersible in Challenger Deep, within the
+                            deepest part of the Marianna Trench.
+                        </h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            In 1960 Don Walsh and Jacques Piccard recorded the world's first deep sea dive to the bottom
+                            of the ocean.
+                        </h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            You are now at the deepest part of the ocean called "Challenger Deep" located at the south
+                            end of the Marianna Trench in the western Pacific, at nearly 7 miles down (.6797 miles to be
+                            precise) though some estimates put the depth to be 11,34 meters down.
+                        </h3>
+                    </div>
+                    <div class="level level-4" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">
+                            Some estimate this is actually the deepest point in the ocean.
+                        </h3>
+                    </div>
+                </div>
+            </section>
+            <!-- <footer class="footer"></footer> -->
         </main>
-        <footer class="footer"></footer>
 
         <!-- parallax scroll -->
         <script src="/src/scripts/parallax-scroll.js"></script>
         <script>
             const parallaxScroll = new ParallaxScroll(".parallax");
+        </script>
+
+        <!-- JS PARALLAX -->
+        <script src="/src/scripts/parallax-effect.js"></script>
+        <script>
+            const parallaxEffectCards = new ParallaxEffect("[data-parallax]", {
+                speed: 500,
+            });
         </script>
     </body>
 </html>

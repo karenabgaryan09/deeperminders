@@ -10,11 +10,15 @@
 @import '../components/navbar/navbar';
 @import '../components/collapse/collapse';
 @import '../components/dropdown/dropdown';
+@import '../components/drawer/drawer';
 
 // PAGES
 @import '../pages/home/home';
 @import '../pages/about/about';
 @import '../pages/error/error';
+
+// SCRIPTS 
+@import '../scripts/lazy-load/lazy-load';
 
 // REST
 @import '../assets/fonts/fonts';
