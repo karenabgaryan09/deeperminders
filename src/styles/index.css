@@ -1176,7 +1176,7 @@ section .container > * {
 }
 .line svg {
   position: absolute;
-  left: 3%;
+  left: 2%;
   top: 0;
   height: 100vh;
   display: inline-block;
@@ -1255,43 +1255,46 @@ section:before {
   left: 0;
 }
 
-#epipelagic {
+.epipelagic {
   height: 2000px;
 }
-#epipelagic:before {
+.epipelagic:before {
   content: "surface";
 }
 
-#mesopelagic {
+.mesopelagic {
   height: 8000px;
 }
-#mesopelagic:before {
+.mesopelagic:before {
   content: "200m";
 }
 
-#bathypelagic {
+.bathypelagic {
   height: 30000px;
 }
-#bathypelagic:before {
+.bathypelagic:before {
   content: "1000m";
 }
 
-#abyssopelagic {
+.abyssopelagic {
   height: 20000px;
 }
-#abyssopelagic:before {
+.abyssopelagic:before {
   content: "4000m";
 }
 
-#hadalpelagic {
+.hadalpelagic {
   height: 50000px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 15px;
 }
-#hadalpelagic:before {
+.hadalpelagic-title {
+  color: #fff;
+}
+.hadalpelagic:before {
   content: "6000m";
 }
-#hadalpelagic:after {
+.hadalpelagic:after {
   content: "11000m";
   left: 0;
   bottom: 0;

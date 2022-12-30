@@ -55,7 +55,7 @@ section {
     z-index: 2;
     svg {
         position: absolute;
-        left: 3%;
+        left: 2%;
         top: 0;
         height: 100vh;
         display: inline-block;
@@ -154,34 +154,37 @@ section {
     // }
 }
 
-#epipelagic {
+.epipelagic {
     height: calc(200 * 10px);
     &:before {
         content: "surface";
     }
 }
-#mesopelagic {
+.mesopelagic {
     height: calc(800 * 10px);
     &:before {
         content: "200m";
     }
 }
-#bathypelagic {
+.bathypelagic {
     height: calc(3000 * 10px);
     &:before {
         content: "1000m";
     }
 }
-#abyssopelagic {
+.abyssopelagic {
     height: calc(2000 * 10px);
     &:before {
         content: "4000m";
     }
 }
-#hadalpelagic {
+.hadalpelagic {
     height: calc(5000 * 10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 15px;
+    &-title {
+        color: #fff;
+    }
     &:before {
         content: "6000m";
     }
