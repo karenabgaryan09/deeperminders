@@ -1,10 +1,3 @@
-// const scrollElement = document.querySelector('.scroll-element')
-// let index = 0
-// document.addEventListener('mousewheel',(e)=>{
-//     console.log(e.deltaY)
-//     scrollElement.style.transform= `translateX(${index +=e.deltaY}px)`
-// })
-
 const ParallaxOptions = (function () {
     const content = document.querySelector(".scroll-content");
     const distanceCounter = document.querySelector(".distance-counter");
@@ -16,17 +9,31 @@ const ParallaxOptions = (function () {
     const image2 = document.querySelector(".scroll-progress-image.image-2");
     const image3 = document.querySelector(".scroll-progress-image.image-3");
     const levelCount = document.querySelector(".level-count");
+    const levelZoneName = document.querySelector(".level-zone-name");
+    const anchorBtn = document.querySelector(".anchor-btn");
+    const scroll = document.querySelector('.hero .scroll')
     const setScrollProgressBar = () => {
         let topDistance = Math.floor(-(content.getBoundingClientRect().top - window.innerHeight)).toFixed(0);
         let percentage = (topDistance * 100) / content.scrollHeight;
         if (scrollProgressBar) scrollProgressBar.style.height = percentage + "%";
 
-        const counter = ((document.documentElement.scrollTop - window.innerHeight / 2 - 100) / 10).toFixed();
-        distanceCounter.innerHTML = counter + "m";
-        surface.style.opacity = '0'
+        let counter = ((document.documentElement.scrollTop - window.innerHeight / 2 - 100) / 10).toFixed();
+        let result = ''
+        scroll.style.opacity = '1'
+        if (counter >= 0) result = counter + 'm' ;
+        if (counter < 0) result = "surface";
+        if(counter < 0 && window.innerWidth < 768) scroll.style.opacity = '0'
+        if (counter >= 11000)   scroll.style.opacity = '0'
+
+        distanceCounter.innerText = result;
+        surface.style.opacity = "0";
         image1.style.opacity = "0";
         image2.style.opacity = "0";
         image3.style.opacity = "0";
+        anchorBtn.style.opacity = "0";
+        if (counter > 0) {
+            anchorBtn.style.opacity = "1";
+        }
         if (counter > 700) {
             image3.style.opacity = "1";
         } else if (counter > 400) {
@@ -34,30 +41,41 @@ const ParallaxOptions = (function () {
         } else if (counter > 0) {
             image1.style.opacity = "1";
         } else {
-            surface.style.opacity = '1'
+            surface.style.opacity = "1";
         }
 
+        let levelCountText = 0
+        let levelZoneNameText = ''
         if (counter > 6000) {
-            levelCount.innerHTML = 5;
+            levelCountText = 5
+            levelZoneNameText =  'hadalpelagic'
         } else if (counter > 4000) {
-            levelCount.innerHTML = 4;
+            levelCountText = 4;
+            levelZoneNameText =  'abyssopelagic'
         } else if (counter > 1000) {
-            levelCount.innerHTML = 3;
+            levelCountText = 3;
+            levelZoneNameText = 'bathypelagic'
         } else if (counter > 200) {
-            levelCount.innerHTML = 2;
+            levelCountText = 2;
+            levelZoneNameText = 'mesopelagic'
         } else {
-            levelCount.innerHTML = 1;
+            levelCountText = 1;
+            levelZoneNameText = 'epipelagic'
         }
+        levelCount.innerText = levelCountText
+        levelZoneName.innerText = levelZoneNameText
     };
 
     function parallax() {
         distance = (content.getBoundingClientRect().top - 50) / speed;
         setScrollProgressBar();
 
-        requestAnimationFrame(parallax);
+        // requestAnimationFrame(parallax);
     }
+    parallax()
 
-    requestAnimationFrame(parallax);
+    // requestAnimationFrame(parallax);
+    window.addEventListener('scroll', parallax)
 })();
 
 const path = document.querySelector(".line-path");
@@ -84,17 +102,16 @@ window.addEventListener("scroll", (e) => {
 // console.log(((1000 / progressHeight) * 100).toFixed())
 // console.log(((9 / 100) * progressHeight).toFixed())
 
-
-
-const createUnits = (function(){
-
+const createUnits = (function () {
     const units = document.querySelector(".units");
-    
+
     let unitsItems = "";
     Array(11000)
         .fill("")
         .forEach((item, index) => {
             if (index % 2 == 0) unitsItems += `<div class="units-item">${index}</div>`;
         });
-    units.innerHTML += `<div class="units">${unitsItems}</div>`;
-})()
+    units.innerHTML += `<ul class="units-list">${unitsItems}</ul>`;
+})();
+
+

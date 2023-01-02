@@ -1,0 +1,112 @@
+// .swiper-container {
+//     width: 480px;
+//   }
+  
+//   @media screen and (min-width: 640px) {
+//     .swiper-container {
+//       width: 640px;
+//     }
+//   }
+  
+//   @media screen and (min-width: 768px) {
+//     .swiper-container {
+//       width: 768px;
+//     }
+//   }
+
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+.swiper {
+    text-align: center;
+    height: 100vh;
+    max-width: fit-content;
+    margin: 0 auto;
+    .title {
+        text-transform: uppercase;
+        position: relative;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 50px;
+            background-color:color(primary,0.5);
+            border-radius: 50px;
+        }
+    }
+    &-slide {
+        // max-height: 100px !important;
+    }
+    a {
+        line-height: 0.5;
+        text-transform: capitalize;
+        color: #fff;
+        font-size: 0.8rem;
+        text-decoration: underline;
+        text-decoration-color: rgba(255,255,255,0.5) ;
+        @include mq(768px){
+            font-size: 2rem;
+        }
+        &:hover {
+            text-decoration-color: #fff ;
+        }
+        &.link-sm {
+            font-size: 1rem;
+        }
+    }
+}
+.swiper-custom-wrapper {
+    user-select: none;
+    position: relative;
+}
+
+.swiper-custom-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100vw - 20px);
+    max-width: calc(100% + 7rem);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+
+.swiper-custom-angle {
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .3s ease;
+    &:hover:not(:active) {
+        background-color: #333;
+        svg path {
+            fill: #fff !important;
+        }
+    }
+   
+    svg {
+        width: 1rem;
+        path {
+            fill: #333 !important;
+            transition: fill .3s ease;
+        }
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0;
+    pointer-events: none;
+}

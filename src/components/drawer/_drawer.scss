@@ -2,7 +2,7 @@
     z-index: 999;
     position: fixed;
     top: 0;
-    width:calc(100% - 40px);
+    width: calc(100% - 40px);
     max-width: 500px;
     background-color: #000;
     box-shadow: rgb(0, 0, 0, 0.1) 0rem 0.625rem 0.9375rem -0.1875rem, rgb(0, 0, 0, 0.6) 0rem 0.25rem 0.375rem -0.125rem;
@@ -10,6 +10,8 @@
     height: 80vh;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: -5px 5px 20px rgba(255, 255, 255, 0.2);
+
     &-left {
         left: 0;
         transform: translateX(-100%);
@@ -83,55 +85,67 @@
     justify-content: space-between;
     padding: 5px 10px;
     font-size: 0.5rem;
-    color: rgba(255,255,255);
+    color: rgba(255, 255, 255);
     letter-spacing: 0.03rem;
-    @include mq(768px){
+    border-top: 1px solid rgba(255,255,255,1);
+    @include mq(768px) {
         font-size: 0.8rem;
     }
     &-name {
         text-align: left;
         text-transform: capitalize;
         font-weight: 500;
-        
     }
     &-depth {
         text-align: right;
         font-weight: 400;
     }
     &-epipelagic {
-        color: rgba(0,0,0,1);
+        color: #fff;
         height: 38px;
         height: 5%;
         // height: 2vh;
-        background-color: rgb(179,255,255);
+        // background-color: rgb(128, 185, 228);
+        background-image: linear-gradient(
+            180deg,
+            rgb(128, 185, 228) 26%,
+            rgb(39, 137, 202) 26%,
+            rgb(39, 137, 202) 82%,
+            rgb(4, 95, 164) 82%,
+            rgb(4, 95, 164) 60%
+        );
         .zone-depth {
             margin-top: -4px;
         }
     }
     &-mesopelagic {
-        color: rgba(0,0,0,1);
+        color: #fff;
         height: 80px;
         height: 10.5%;
         // height: 6vh; // 9 - 2
-        background-color: rgb(122,201,232);
+        // background-color: rgb(39,137,202);
+        background-color: rgb(19, 8, 82);
     }
     &-bathypelagic {
         height: 200px;
         height: 25.3%;
 
         // height: 28vh; // 36 - (2 + 6)
-        background-color: rgb(0,82,140);
+        // background-color: rgb(4, 95, 164);
+        background-color: #000;
     }
     &-abyssopelagic {
         height: 135px;
         height: 19%;
         // height: 19vh; // 55 - (2 + 6 + 28)
-        background-color: rgb(0,47,104);
+        // background-color:rgb(19, 8, 82);
+        background-color: #000;
     }
     &-hadalpelagic {
         height: 310px;
         height: 40%;
         // height: 45vh; // 100 - (2 + 6 + 28 + 19)
-        background-color: rgb(7,0,50);
+        // background-color: rgb(0,0,0);
+        background-color: #000;
     }
 }

@@ -18,7 +18,6 @@ ParallaxScroll.prototype = {
             const top = (target.getBoundingClientRect().top - 400) * speed;
             if (vertical || !horizontal) posY = top;
             if (horizontal) posX = top;
-
             target.style.transform = `translate3d(${posX}px, ${posY}px, 0)`;
         });
     },

@@ -82,7 +82,7 @@ ParallaxEffect.prototype = {
         Object.assign(this.glareElement.style, glareStyle);
 
         this.glareInnerElement = document.createElement("div");
-        Object.assign(this.glareInnerElement.style, glareInnerStyle(this.element.offsetWidth));
+        Object.assign(this.glareInnerElement.style, glareInnerStyle(this.element.offsetHeight));
         this.glareInnerElement.className = "glare-inner";
 
         this.element.appendChild(this.glareElement);

@@ -4,11 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sample</title>
+        <title>Deeperminers</title>
         <link rel="icon" href="./src/assets/images/favicon.png" />
         <meta name="keywords" content="website, template, sample" />
         <meta name="description" content="this sample created for prototyping purpoces" />
-        <meta name="author" content="Fiverr: karen_werner | LinkedIn https://www.linkedin.com/in/karenabgaryan09/" />
+        <meta name="author" content="Jonathan Poston" />
         <!-- OPEN GRAPH -->
         <meta property="og:title" content="Sample" />
         <meta property="og:type" content="website" />
@@ -31,6 +31,10 @@
         <script src="./src/components/dropdown/dropdown.js" defer></script>
         <script src="./src/components/drawer/drawer.js" defer></script>
         <script src="./src/scripts/lazy-load/lazy-load.js" defer></script>
+        <!-- SWIPER -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+        <script src="/src/components/swiper/swiper.js" defer></script>
     </head>
     <body>
         <div class="line">
@@ -56,10 +60,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/">Home</a>
-                        </li>
-
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
@@ -67,33 +67,49 @@
                                 role="button"
                                 tabindex="0"
                                 data-toggle="dropdown"
-                                data-target="#navbarDropdown-1"
+                                data-target="#epipelagic-menu"
                             >
                                 epipelagic
                             </a>
-                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="navbarDropdown-1">
+                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="epipelagic-menu">
                                 <li>
-                                    <a class="dropdown-item" href="#sand">
+                                    <a class="dropdown-item">
                                         <div class="startIcon">
-                                            <img src="/src/assets/images/minerals/sand.png" alt="" />
+                                            <img src="/src/assets/images/minerals/empty.png" />
                                         </div>
                                         sand</a
                                     >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#silt">
+                                    <a class="dropdown-item">
                                         <div class="startIcon">
-                                            <img src="/src/assets/images/minerals/silt.webp" alt="" />
+                                            <img src="/src/assets/images/minerals/empty.png" />
                                         </div>
                                         silt</a
                                     >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#tuna">
+                                    <a class="dropdown-item">
                                         <div class="startIcon">
-                                            <img src="/src/assets/images/minerals/tuna.png" alt="" />
+                                            <img src="/src/assets/images/minerals/empty.png" />
                                         </div>
                                         tuna</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        seabed</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        ilmenite</a
                                     >
                                 </li>
                             </ul>
@@ -105,58 +121,367 @@
                                 role="button"
                                 tabindex="0"
                                 data-toggle="dropdown"
-                                data-target="#navbarDropdown-2"
+                                data-target="#mesopelagic-menu"
                             >
                                 mesopelagic
                             </a>
-                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="navbarDropdown-2">
-                                <li><a class="dropdown-item" href="#/">swordfish</a></li>
-                                <li><a class="dropdown-item" href="#/">shrimp</a></li>
-                                <li><a class="dropdown-item" href="#/">hatchet</a></li>
+                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="mesopelagic-menu">
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        swordfish</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        shrimp</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        hatchet</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                id="navbarDropdown"
+                                role="button"
+                                tabindex="0"
+                                data-toggle="dropdown"
+                                data-target="#bathypelagic-menu"
+                            >
+                                bathypelagic
+                            </a>
+                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="bathypelagic-menu">
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        swordfish</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        angular fish</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        squid</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        tripod</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        hydrothermal vents</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        gold</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        silver</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        copper</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        manganese</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        cobalt</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        zinc</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        lithium</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        iron</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        nickel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        titanium</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        platinum</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                id="navbarDropdown"
+                                role="button"
+                                tabindex="0"
+                                data-toggle="dropdown"
+                                data-target="#abyssopelagic-menu"
+                            >
+                                abyssopelagic
+                            </a>
+                            <ul
+                                class="dropdown-menu drop"
+                                data-parent="#navbarSupportedContent"
+                                id="abyssopelagic-menu"
+                            >
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        nickel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        zinc</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        copper</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        gold</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        cobalt</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        titanium</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        manganese</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                id="navbarDropdown"
+                                role="button"
+                                tabindex="0"
+                                data-toggle="dropdown"
+                                data-target="#hadalpelagic-menu"
+                            >
+                                hadalpelagic
+                            </a>
+                            <ul class="dropdown-menu drop" data-parent="#navbarSupportedContent" id="hadalpelagic-menu">
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        nickel</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        lithium</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        gold</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        platinum</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div class="startIcon">
+                                            <img src="/src/assets/images/minerals/empty.png" />
+                                        </div>
+                                        silver</a
+                                    >
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <header class="hero" data-lazy-block>
-            <div class="container">
-                <h1 class="display-1 hero-title parallax" data-parallax-speed="-0.6">deeperminers</h1>
-                <img class="ship" data-lazy="fade-right" src="/src/assets/images/ship.png" alt="" />
+        <header class="hero" id="hero" data-lazy-block>
+            <div class="container-fluid">
+                <h1 class="display-1 hero-title">
+                    Mine <span class="text-dark" > The </span>  Deep Sea
+                </h1>
+                <img class="ship" data-lazy="fade-right" src="/src/assets/images/minerals/empty.png" alt="" />
+
                 <div class="scroll">
                     <div class="distance-counter"></div>
-                    <div class="image-wrapper">
-                        <img class="scroll-indicator" src="/src/assets/images/icons/ticks.svg" alt="" />
-                        <img class="scroll-indicator" src="/src/assets/images/icons/ticks.svg" alt="" />
-                    </div>
-                    <div class="scroll-column scroll-column-1"></div>
+
+                    <!-- <div class="scroll-column scroll-column-1"></div> -->
                     <div class="scroll-column scroll-column-2">
-                        <div class="scroll-progress">
-                            <div class="layers">
-                                <div class="layer layer-epipelagic">200m</div>
-                                <div class="layer layer-mesopelagic">1000m</div>
-                                <div class="layer layer-bathypelagic">4000m</div>
-                                <div class="layer layer-abyssopelagic">6000m</div>
-                                <div class="layer layer-hadalpelagic">11000m</div>
+                        <div class="jjj" style="position: relative">
+                            <div class="image-wrapper">
+                                <img class="scroll-indicator" src="/src/assets/images/icons/ticks.svg" alt="" />
+                                <img class="scroll-indicator" src="/src/assets/images/icons/ticks.svg" alt="" />
                             </div>
-                            <div class="scroll-progress-bar">
-                                <div class="scroll-progress-images">
-                                    <div class="scroll-progress-image image-0">
-                                        <img src="/src/assets/images/icons/surface.png" alt="" />
-                                    </div>
-                                    <div class="scroll-progress-image image-1">
-                                        <img src="/src/assets/images/icons/diver-3.png" alt="" />
-                                    </div>
-                                    <div class="scroll-progress-image image-2">
-                                        <img src="/src/assets/images/icons/diver-4.png" alt="" />
-                                    </div>
-                                    <div class="scroll-progress-image image-3">
-                                        <img src="/src/assets/images/icons/submarine.png" alt="" />
+                            <div class="scroll-progress">
+                                <div class="layers">
+                                    <div class="layer layer-epipelagic">200m</div>
+                                    <div class="layer layer-mesopelagic">1000m</div>
+                                    <div class="layer layer-bathypelagic">4000m</div>
+                                    <div class="layer layer-abyssopelagic">6000m</div>
+                                    <div class="layer layer-hadalpelagic">11000m</div>
+                                </div>
+                                <div class="scroll-progress-bar">
+                                    <div class="scroll-progress-images">
+                                        <div class="scroll-progress-image image-0">
+                                            <img src="/src/assets/images/icons/ship.webp" alt="" />
+                                        </div>
+                                        <div class="scroll-progress-image image-1">
+                                            <img src="/src/assets/images/icons/diver-3.png" alt="" />
+                                        </div>
+                                        <div class="scroll-progress-image image-2">
+                                            <img src="/src/assets/images/icons/diver-4.png" alt="" />
+                                        </div>
+                                        <div class="scroll-progress-image image-3">
+                                            <img src="/src/assets/images/icons/submarine.png" alt="" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="scroll-level-count"><b class="level-count">1</b> / <span>5</span></div>
+                        <div class="scroll-level-count">
+                            <div class="level-zone-name">epipelagic</div>
+                            <b class="level-count">1</b> / <span>5</span>
+                        </div>
+                    </div>
+                    <div class="btns-group">
+                        <a class="btn btn-primary anchor-btn" href="#hero">
+                            <span class="startIcon"><img src="/src/assets/images/icons/anchor.svg" alt="" /></span>
+                            <!-- <span class="startIcon"><img src="/src/assets/images/preloader.gif" data-src="/src/assets/images/icons/ship.webp" alt="" /></span> -->
+                            surface now</a
+                        >
                         <button class="btn btn-primary" data-target="#drawer-right" data-toggle="drawer">zones</button>
                     </div>
                 </div>
@@ -185,6 +510,13 @@
                     </div>
                 </div>
             </div>
+            <div class="hero-bottom">
+                <h2 class="display-6 hero-description">by scrolling down</h2>
+                <div class="image-group">
+                    <img src="/src/assets/images/icons/chevron-down-light.svg" alt="" />
+                    <img src="/src/assets/images/icons/chevron-down.svg" alt="" />
+                </div>
+            </div>
         </header>
         <main class="scroll-element scroll-content">
             <div class="units"></div>
@@ -192,7 +524,7 @@
                 <div class="container">
                     <div class="level level-0 title-wrapper" data-lazy-block>
                         <h5 class="display-6 sup-title">epipelagic</h5>
-                        <h2 class="display-2" data-lazy="fade-up">
+                        <h2 class="display-5" data-lazy="fade-up">
                             You are in the Epipelagic zone which extends down 200 meters
                         </h2>
                     </div>
@@ -200,15 +532,19 @@
                         <h3 class="display-6" data-lazy="fade-up">
                             You dredged some sand that can be sold for construction purposes.
                         </h3>
-                        <div class="level-content">
+                        <div class="level-content content content-left">
                             <div
                                 class="image-wrapper parallax"
                                 data-parallax="true"
-                                data-parallax-speed="0.02"
+                                data-parallax-speed="0.03"
                                 data-lazy="fade-up"
                             >
                                 <div class="image" data-parallax-inner data-parallax-glare="true">
-                                    <img src="/src/assets/images/minerals/sand.png" alt="" />
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/sand.png"
+                                        alt=""
+                                    />
                                     <div class="image-name">sand</div>
                                 </div>
                             </div>
@@ -216,16 +552,20 @@
                     </div>
                     <div class="level level-2" data-lazy-block id="tuna">
                         <h3 class="display-6" data-lazy="fade-up">A prized tuna just swam by.</h3>
-                        <div class="level-content">
+                        <div class="level-content content content-center">
                             <div
                                 class="image-wrapper parallax"
                                 data-parallax="true"
                                 data-parallax-horizontal="true"
-                                data-parallax-speed="-0.07"
+                                data-parallax-speed="-0.03"
                                 data-lazy="fade-up"
                             >
                                 <div class="image" data-parallax-inner data-parallax-glare="true">
-                                    <img src="/src/assets/images/minerals/tuna.png" alt="" />
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/tuna.png"
+                                        alt=""
+                                    />
                                     <div class="image-name">tuna</div>
                                 </div>
                             </div>
@@ -235,15 +575,19 @@
                         <h3 class="display-6" data-lazy="fade-up">
                             You dredged some silt and mud that can be sold for construction purposes.
                         </h3>
-                        <div class="level-content">
+                        <div class="level-content content content-right">
                             <div
                                 class="image-wrapper parallax"
                                 data-parallax="true"
-                                data-parallax-speed="0.1"
+                                data-parallax-speed="0.03"
                                 data-lazy="fade-up"
                             >
                                 <div class="image" data-parallax-inner data-parallax-glare="true">
-                                    <img src="/src/assets/images/minerals/silt.webp" alt="" />
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/silt.webp"
+                                        alt=""
+                                    />
                                     <div class="image-name">silt</div>
                                 </div>
                             </div>
@@ -253,23 +597,30 @@
                         <h3 class="display-6" data-lazy="fade-up">
                             You found a seabed with mineral rich sands with ilmenite and diamonds mixed in.
                         </h3>
-                        <div class="level-content">
+                        <div class="level-content content content-center">
                             <div
                                 class="image-wrapper parallax"
                                 data-parallax="true"
-                                data-parallax-speed="-0.1"
+                                data-parallax-speed="0.01"
                                 data-lazy="fade-up"
                             >
                                 <div class="image" data-parallax-inner data-parallax-glare="true">
-                                    <img src="/src/assets/images/minerals/seabed.png" alt="" />
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/seabed.png"
+                                        alt=""
+                                    />
                                     <div class="image-name">seabed</div>
-                                    <img src="/src/assets/images/minerals/ilmenite.png" alt="" />
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/ilmenite.png"
+                                        alt=""
+                                    />
                                     <div class="image-name">ilmenite</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
                 </div>
             </section>
 
@@ -277,7 +628,7 @@
                 <div class="container">
                     <div class="title-wrapper level level-0" data-lazy-block>
                         <h5 class="display-6 sup-title">mesopelagic</h5>
-                        <h2 class="display-2" data-lazy="fade-up">
+                        <h2 class="display-5" data-lazy="fade-up">
                             You are in the Mesopelagic zone which extends from 201 - 1000 meters
                         </h2>
                     </div>
@@ -285,6 +636,33 @@
                         <h3 class="display-6" data-lazy="fade-up">
                             swordfish, shrimp, and hatchet fish are swiming around
                         </h3>
+                        <div
+                            class="image-wrapper parallax"
+                            data-parallax="true"
+                            data-parallax-speed="0.03"
+                            data-lazy="fade-up"
+                        >
+                            <div class="image" data-parallax-inner data-parallax-glare="true">
+                                <img
+                                    src="/src/assets/images/preloader.gif"
+                                    data-src="/src/assets/images/minerals/hatchet.png"
+                                    alt=""
+                                />
+                                <div class="image-name">hatchet</div>
+                                <img
+                                    src="/src/assets/images/preloader.gif"
+                                    data-src="/src/assets/images/minerals/shrimp.png"
+                                    alt=""
+                                />
+                                <div class="image-name">shrimp</div>
+                                <img
+                                    src="/src/assets/images/preloader.gif"
+                                    data-src="/src/assets/images/minerals/swordfish.png"
+                                    alt=""
+                                />
+                                <div class="image-name">swordfish</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -293,7 +671,7 @@
                 <div class="container">
                     <div class="title-wrapper level level-0" data-lazy-block>
                         <h5 class="display-6 sup-title">bathypelagic</h5>
-                        <h2 class="display-2" data-lazy="fade-up">
+                        <h2 class="display-5" data-lazy="fade-up">
                             You are in the Bathypelagic zone which extends from 1000-4000 meters. This is where the
                             ocean becomes pitch black and at a constant near freezing temperature, 39F. The pressure is
                             now 5850 pounds per square inch. By comparison, an alligator, which has the strongest bite
@@ -302,152 +680,805 @@
                     </div>
                     <div class="level level-1" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">An angular fish just swam by</h3>
+                        <div class="level-content content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/angular.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">angular fish</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-2" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">There is a giant squid</h3>
+                        <div class="level-content content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/squid.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">squid</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-3" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">A tripod fish loves the deep water</h3>
+                        <div
+                            class="image-wrapper parallax"
+                            data-parallax="true"
+                            data-parallax-speed="0.03"
+                            data-lazy="fade-up"
+                        >
+                            <div class="image" data-parallax-inner data-parallax-glare="true">
+                                <img
+                                    src="/src/assets/images/preloader.gif"
+                                    data-src="/src/assets/images/minerals/tripod.png"
+                                    alt=""
+                                />
+                                <div class="image-name">tripod spiderfish</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-4" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             Active and extinct hydrothermal vents begin here and go down to 3700 meters. Their sulfide
                             deposits contain minerals that can be mined.
                         </h3>
+                        <div
+                            class="image-wrapper parallax"
+                            data-parallax="true"
+                            data-parallax-speed="0.03"
+                            data-lazy="fade-up"
+                        >
+                            <div class="image" data-parallax-inner data-parallax-glare="true">
+                                <img
+                                    src="/src/assets/images/preloader.gif"
+                                    data-src="/src/assets/images/minerals/hydrothermal-vents-big.webp"
+                                    alt=""
+                                />
+                                <div class="image-name">hydrothermal vents</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-5" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             "You found some gold - there is an estimated $150 trillion worth of gold down here so keep
                             mining!"
                         </h3>
+                        <div
+                            class="image-wrapper parallax"
+                            data-parallax="true"
+                            data-parallax-speed="0.03"
+                            data-lazy="fade-up"
+                        >
+                            <div class="image" data-parallax-inner data-parallax-glare="true">
+                                <img
+                                    src="/src/assets/images/preloader.gif"
+                                    data-src="/src/assets/images/minerals/gold-sm.png"
+                                    alt=""
+                                />
+                                <div class="image-name">gold</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-6" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found silver!</h3>
+                        <div
+                            class="image-wrapper parallax"
+                            data-parallax="true"
+                            data-parallax-speed="0.03"
+                            data-lazy="fade-up"
+                        >
+                            <div class="image" data-parallax-inner data-parallax-glare="true">
+                                <img
+                                    src="/src/assets/images/preloader.gif"
+                                    data-src="/src/assets/images/minerals/silver-big.png"
+                                    alt=""
+                                />
+                                <div class="image-name">silver</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-7" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found copper!</h3>
+                        <div class="level-content content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/copper.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">copper</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-8" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found manganese!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/manganese-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">manganese</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-9" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You are at 1 mile deep</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-10" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found some lead!</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-11" data-lazy-block>
+                        <h3 class="display-6" data-lazy="fade-up">You found cobalt!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/cobalt.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">cobalt</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level level-12" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more lead!</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-13" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found zinc!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/zinc.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">zinc</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-14" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more lead!</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-15" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found lithium!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/lithium.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">lithium</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-16" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more gold!</h3>
+                        <div class="content content-left">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/gold-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">gold</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-17" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more silver!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/silver-big.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">silver</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-18" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more zinc!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/zinc.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">zinc</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-19" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more cobalt!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/cobalt.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">cobalt</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-20" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more lithium!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/lithium.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">lithium</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-21" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more manganese!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/manganese-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">manganese</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-22" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             You found a huge trove of copper, nickel, cobalt, iron, manganese, and rare earth elements
                         </h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div
+                                    class="image"
+                                    data-parallax-inner
+                                    data-parallax-glare="true"
+                                    style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr"
+                                >
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/iron.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">iron</div>
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/copper.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">copper</div>
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/cobalt.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">cobalt</div>
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/manganese-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">manganese</div>
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/nickel-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">nickel</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-23" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found nickel!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/nickel-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">nickel</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-24" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more gold!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/gold-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">gold</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-25" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found titanium!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/titanium.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">titanium</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-26" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more nickel!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/nickel-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">nickel</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-27" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more silver!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/silver-big.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">silver</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-28" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found rare earth elements!</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-29" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more copper!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/copper.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">copper</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-30" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more titanium!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/titanium.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">titanium</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-31" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more rare earth elements!</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-32" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more zinc!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/zinc.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">zinc</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-33" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found platinum!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/platinum.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">platinum</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-34" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more cobalt!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/cobalt.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">cobalt</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-35" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more rare earth elements!</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-36" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more platinum!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/platinum.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">platinum</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-37" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more manganese!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/manganese-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">manganese</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-38" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You are at 2 miles deep</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-39" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more gold!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/gold-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">gold</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-40" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more nickel!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/nickel-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">nickel</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-41" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more platinum!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/platinum.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">platinum</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-42" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more zinc!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/zinc.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">zinc</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-43" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more platinum!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/platinum.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">platinum</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-44" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more rare earth elements!</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-45" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             This is generally where most deep sea mining stops, but mining can go as deep as 6500
                             meters.
                         </h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-46" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More titanium !</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/titanium.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">titanium</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-47" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More zinc!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/zinc.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">zinc</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -456,48 +1487,201 @@
                 <div class="container">
                     <div class="title-wrapper level level-0" data-lazy-block>
                         <h5 class="display-6 sup-title">abyssopelagic</h5>
-                        <h2 class="display-2" data-lazy="fade-up">
+                        <h2 class="display-5" data-lazy="fade-up">
                             You are in the Abyssopelagic Zone which extends from 4000 to 6000 meters.
                         </h2>
                     </div>
                     <div class="level level-1" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More nickel!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/nickel-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">nickel</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-2" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More zinc!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/zinc.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">zinc</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-3" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More copper!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/copper.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">copper</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-4" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More gold!</h3>
+                        <div class="content content-left">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/gold-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">gold</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-5" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You are at 3 miles deep</h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-6" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More cobalt!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/cobalt.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">cobalt</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-7" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             You've reached the bottom of the Clipperton Fracture Zone, a region in the central Pacific
                             where 19 deep sea mining exploratory licenses have been granted by the International Seabed
                             authority to search for potato sized polymetallic nodules.
                         </h3>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-8" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More cobalt!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/cobalt.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">cobalt</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-9" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More titanium!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/titanium.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">titanium</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-10" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More copper!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/copper.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">copper</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-11" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More manganese!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/manganese-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">manganese</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-1" data-lazy-block>
+                    <div class="level level-12" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More rare earth metals!</h3>
                     </div>
                 </div>
@@ -507,71 +1691,215 @@
                 <div class="container">
                     <div class="level level-0 title-wrapper" data-lazy-block>
                         <h5 class="display-6 sup-title">hadalpelagic</h5>
-                        <h2 class="display-2 hadalpelagic-title" data-lazy="fade-up">
+                        <h2 class="display-5 hadalpelagic-title" data-lazy="fade-up">
                             You are in the Hadalpelagic Zone which extends from 4000 meters to the bottom of the ocean.
                             The pressure is immense at 8 tons per sq / in, yet life (single celled plankton) has been
                             found here.
                         </h2>
                     </div>
 
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-1" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More nickel!</h3>
+                        <div class="content content-right">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/nickel-sm.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">nickel</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-2" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">More lithium!</h3>
+                        <div class="content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/lithium.webp"
+                                        alt=""
+                                    />
+                                    <div class="image-name">lithium</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-3" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You found more lead.</h3>
                     </div>
                     <div class="level level-4" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You are at 4 miles deep</h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-5" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             You found the last bits of gold, platinum and silver. Nice going, you are almost at the
                             limit of where deep sea mining can go.
                         </h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-6" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">This is the limit to deep sea mining.</h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-7" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You are at 5 miles deep</h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-8" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">This is the height of Mt. Everest!</h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-9" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">You are at 6 miles deep</h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-10" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             This is the depth James Cameron landed at in his submersible in Challenger Deep, within the
                             deepest part of the Marianna Trench.
                         </h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-11" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             In 1960 Don Walsh and Jacques Piccard recorded the world's first deep sea dive to the bottom
                             of the ocean.
                         </h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-12" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             You are now at the deepest part of the ocean called "Challenger Deep" located at the south
                             end of the Marianna Trench in the western Pacific, at nearly 7 miles down (.6797 miles to be
                             precise) though some estimates put the depth to be 11,34 meters down.
                         </h3>
                     </div>
-                    <div class="level level-4" data-lazy-block>
+                    <div class="level level-13" data-lazy-block>
                         <h3 class="display-6" data-lazy="fade-up">
                             Some estimate this is actually the deepest point in the ocean.
                         </h3>
                     </div>
                 </div>
             </section>
-            <!-- <footer class="footer"></footer> -->
         </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <h2 class="display-2 title">References</h2>
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://en.wikipedia.org/wiki/Deep_sea_mining"
+                                target="_blank"
+                                class="link link-light"
+                                >Deep sea mining</a
+                            >
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.weather.gov/jetstream/layers_ocean"
+                                target="_blank"
+                                class="link link-light"
+                                >National Weather Service</a
+                            >
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://oceanexplorer.noaa.gov/explorations/18ccz/background/mining/mining.html#:~:text=The%20nodules%20of%20greatest%20mining,(12%2C000%20%2D%2018%2C000%20feet)."
+                                target="_blank"
+                                class="link link-light"
+                                >ocean exploration</a
+                            >
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://en.wikipedia.org/wiki/Deepsea_Challenger"
+                                target="_blank"
+                                class="link link-light"
+                                >Deepsea Challenger</a
+                            >
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://letstalkscience.ca/educational-resources/backgrounders/ocean-zones"
+                                target="_blank"
+                                class="link link-light"
+                                >Ocean Zones</a
+                            >
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.biologicaldiversity.org/campaigns/deep-sea_mining/pdfs/Deep-seaMiningFAQ.pdf"
+                                target="_blank"
+                                class="link link-light"
+                                >Deep-sea Mining FAQ</a
+                            >
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <a
+                                href="https://www.pewtrusts.org/en/research-and-analysis/fact-sheets/2017/02/deep-sea-mining-the-basics"
+                                target="_blank"
+                                class="link link-light"
+                                >Deep Sea Mining: The Basics</a
+                            >
+                        </div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide">
+                            <span class="text-sm">creative director - </span>
+                            <a href="https://jonathanposton.com/" target="_blank" class="link link-sm">
+                                Jonathan Poston</a
+                            >
+                        </div>
+                        <div class="swiper-slide">
+                            <span class="text-sm">project developer - </span>
+                            <a href="https://www.linkedin.com/in/karenabgaryan09/" target="_blank" class="link link-sm"
+                                >Karen Abgaryan</a
+                            >
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+
+                    <!-- If we need navigation buttons -->
+
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.querySelectorAll("[data-src]").forEach((image) => {
+                image.setAttribute("data-src", "/src/assets/images/minerals/empty.png");
+            });
+        </script>
 
         <!-- parallax scroll -->
         <script src="/src/scripts/parallax-scroll.js"></script>

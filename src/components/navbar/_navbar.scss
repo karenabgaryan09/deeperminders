@@ -51,21 +51,40 @@
         align-items: center;
         .content-collapse,
         .dropdown-menu {
-            background-color: transparent !important;
             box-shadow: none;
             border: none;
             // background-color: #fff;
             // backdrop-filter: blur(100px);
-            background-color: rgba(255,255,255, 0.1) !important;
+            background-color: color(primary) !important;
+            max-height: 500px;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 5px;
+                // background-color: rgba(0, 0, 0, 0.05);
+                background-color: color(primary);
+            }
+            &::-webkit-scrollbar-thumb {
+                // background-color: rgba(0, 0, 0, 0.1);
+                background-color: #2a2a72;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+                &:active {
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+            }
         }
         .dropdown-item {
             color: #fff;
             display: flex;
             align-items: center;
             gap: 5px;
+            text-transform: capitalize;
+            transition: background-color .3s ease, color .3s ease;
             .startIcon {
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 object-fit: contain;
                 display: flex;
                 align-items: center;
@@ -86,6 +105,7 @@
         list-style: none;
         margin: 0 auto;
         .nav-link {
+            text-transform: capitalize;
             padding-left: 0;
             padding-right: 0;
         }
@@ -152,7 +172,7 @@
 
 @media (min-width: 992px) {
     .navbar-expand-lg {
-        background-color:transparent;
+        // background-color:transparent;
         flex-wrap: nowrap;
         justify-content: flex-start;
         .navbar {

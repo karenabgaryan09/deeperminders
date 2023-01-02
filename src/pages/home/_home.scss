@@ -1,15 +1,21 @@
 body {
     background-color: #000;
 
-    background-image: linear-gradient(180deg, #fff -31%, #009ffd 15%, #2a2a72 64%, #000 84%);
+    // background-image: linear-gradient(180deg, #fff -31%, #009ffd 15%, #2a2a72 64%, #000 84%);
+    // background-image: linear-gradient(
+    //     180deg,
+    //     rgb(128, 185, 228) 2%,
+    //     rgb(39,137,202) 2%,
+    //     rgb(4, 95, 164) 2%,
+    //     rgb(19, 8, 82) 1%,
+    //     #000 95%,
+    // );
 }
 
 main {
     position: relative;
-    background-image: url("../assets/images/icons/ticks.svg");
-    background-size: 30px;
-    background-repeat: repeat-y;
-    background-position: 45px;
+ 
+
     // @include mq(576px) {
     //         background-position: 7%;
     // }
@@ -26,34 +32,37 @@ main {
 }
 
 section {
-    // padding: 2rem 0;
-    // min-height: 2000px;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
     .container {
-        display: flex;
-        flex-direction: column;
         height: 100%;
-        & > * {
-            flex: 1;
-        }
+       
     }
 }
 
-
-
 .units {
+    background-image: url("../assets/images/icons/ticks.svg");
+    background-size: 15px;
+    background-repeat: repeat-y;
+    background-position: 40px;
+    width: 100%;
+
     position: absolute;
     height: 100%;
-    // width: 100%;
     top: 0;
     left: 3px;
     pointer-events: none;
     z-index: 996;
-    
+    @include mq(768px){
+        background-size: 30px;
+    }
+    &-list {
+        text-align: right;
+        display: inline-block;
+    }
     &-item {
         text-align: center;
         font-size: 0.7rem;
-        color: rgba(255,255,255,0.5);
+        color: rgba(255, 255, 255, 0.5);
         letter-spacing: 0.03rem;
         height: 20px;
     }
@@ -85,24 +94,61 @@ section {
 .level {
     // min-height: 700px;
     // padding-top: 100px;
+    overflow: hidden;
+    min-height: 200px;
     &-content {
-        text-align: center;
+        display: none;
+        // text-align: center;
         // padding: 100px 0;
     }
 }
 
 .image-wrapper {
     display: inline-block;
+    position: relative;
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     top: -5%;
+    //     right: -5%;
+    //     width: 1px;
+    //     height: 50%;
+    //     background-color: rgba(255,255,255,0.2);
+    // }
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: -5%;
+    //     right: -5%;
+    //     background-color: rgba(255,255,255,0.2);
+    //     width: 100vw;
+    //     height: 1px;
+    // }
+    border: 1px solid rgba(255,255,255,0.2);
+    border-width: 1px 1px 0 0;
+    border-top-right-radius: 10px;
+    padding: 5px;
+    padding-bottom: 0;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: 100%;
+        // background-color: rgba(255,255,255,0.2);
+        width: 100vw;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(255,255,255,0.2), #fff, rgba(255,255,255,0.2) );
+    }
 }
 .image {
     display: inline-block;
     transform-style: preserve-3d;
-    padding: 30px;
+    padding: 10px 30px;
     border-radius: 10px;
     &:hover {
         z-index: 1;
         img {
-            transform: translateZ(50px);
+            transform: translateZ(100px) scale(1.2);
             filter: drop-shadow(0 10px 3px rgba(0, 0, 0, 0.3));
         }
         .image {
@@ -114,27 +160,33 @@ section {
     img {
         display: block;
         width: 100%;
-        width: 200px;
+        // width: 200px;
+        // height: 100px;
+        width: 120px;
         height: 100px;
+        // width: 100px;
+        // height: 50px;
         object-fit: contain;
         position: relative;
         transform-style: preserve-3d;
-        transition: transform 1s ease;
+        transition: transform .3s ease;
     }
     &-name {
         text-align: left;
         color: #fff;
         font-size: 0.8rem;
-        text-transform: uppercase;
+        font-weight: 500;
+        text-transform: capitalize;
         transition: transform 0.3s ease;
     }
 }
 
 .sup-title {
-    padding: 20px;
+    // padding: 20px 0;
     color: #00ff8c;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     text-transform: capitalize;
 }
 
@@ -158,47 +210,284 @@ section {
         top: 0;
         left: 0;
     }
-    // &:after {
-    //     content: '';
-    //     position: absolute;
-    //     transform: translateY(-50%);
-    //    height: 30px;
-    //    width: 100px;
-    //    background-color: color(primary);
-    //     // background-color: #00ff8c;
-    //     top: 0;
-    //     right: 0;
-    // }
+
+    .level {
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
 }
 
 .epipelagic {
     height: calc(200 * 10px);
+
+    // background-image: linear-gradient(
+    //     180deg,
+    //     rgb(128, 185, 228) 26%,
+    //     rgb(39, 137, 202) 26%,
+    //     rgb(39, 137, 202) 82%,
+    //     rgb(4, 95, 164) 82%,
+    //     rgb(4, 95, 164) 60%
+    // );
     &:before {
         content: "surface";
+    }
+    .level {
+        &-0 {
+            height: calc(22 * 10px);
+        }
+        &-1 {
+            height: calc(16 * 10px);
+        }
+        &-2 {
+            height: calc(20 * 10px);
+        }
+        &-3 {
+            height: calc(24 * 10px);
+        }
+        &-4 {
+            height: calc(118 * 10px);
+        }
     }
 }
 .mesopelagic {
     height: calc(800 * 10px);
+    // background-color: rgb(19, 8, 82);
     &:before {
         content: "200m";
     }
+    .level {
+        &-0 {
+            // height: calc(22 * 10px);
+            height: 234px;
+        }
+        &-1 {
+            height: calc(16 * 10px);
+            height:  450px;
+        }
+    }
 }
 .bathypelagic {
+    // background-color: #000;
     height: calc(3000 * 10px);
     &:before {
         content: "1000m";
     }
+    .level {
+        &-0 {
+            height: calc(16 * 10px);
+        }
+        &-1 {
+            height: calc(15 * 10px);
+            height: 192px;
+        }
+        &-2 {
+            height: calc(39 * 10px);
+        }
+        &-3 {
+            height: calc(330 * 10px);
+        }
+        &-4 {
+            height: calc(30 * 10px);
+        }
+        &-5 {
+            height: calc(12 * 10px);
+            height: 322px;
+        }
+        &-6 {
+            height: 487px;
+        }
+        &-7 {
+            height: 600px;
+        }
+        &-8 {
+            height: 600px;
+        }
+        &-9 {
+            height: 120px;
+        }
+        &-10 {
+            height: 390px;
+        }
+        &-11 {
+            height: 647px;
+        }
+        &-12{
+            height: 400px;
+        }
+        &-13 {
+            height: 830px;
+        }
+        &-14 {
+            height: 700px;
+        }
+        &-15 {
+            height: 200px;
+        }
+        &-16 {
+            height: 852px;
+        }
+        &-17 {
+            height: 900px;
+        }
+        &-18 {
+            height: 830px;
+        }
+        &-19 {
+            height: 755px;
+        }
+        &-20 {
+            height: 535px;
+        }
+        &-21 {
+            height: 250px;
+        }
+        &-22 {
+            height: 450px;
+        }
+        &-23 {
+            height: 515px;
+        }
+        &-24 {
+            height: 212px;
+        }
+        &-25 {
+            height: 580px;
+        }
+        &-26 {
+            height: 490px;
+        }
+        &-27 {
+            height: 1060px;
+        }
+        &-28 {
+            height: 240px;
+        }
+        &-29 {
+            height: 566px;
+        }
+        &-30 {
+            height: 805px;
+        }
+        &-31 {
+            height: 475px;
+        }
+        &-32 {
+            height: 850px;
+        }
+        &-33 {
+            height: 642px;
+        }
+        &-34 {
+            height: 800px;
+        }
+        &-35 {
+            height: 810px;
+        }
+        &-36 {
+            height: 362px;
+        }
+        &-37 {
+            height: 212px;
+        }
+        &-38 {
+            height: 855px;
+        }
+        &-39 {
+            height: 860px;
+        }
+        &-40 {
+            height: 250px;
+        }
+        &-41 {
+            height: 540px;
+        }
+        &-42 {
+            height: 1434px;
+        }
+        &-43 {
+            height: 553px;
+        }
+        &-44 {
+            height: 325px;
+        }
+        &-45 {
+            height: 96px;
+        }
+        &-46 {
+            height: 1570px;
+        }
+        &-47 {
+            height: 96px;
+        }
+    }
 }
 .abyssopelagic {
+    // background-color: #000;
     height: calc(2000 * 10px);
+    background-color: #000;
     &:before {
         content: "4000m";
     }
+    .level {
+       
+        &-0 {
+            height: 140px;
+        }
+        &-1 {
+            height: 2000px;
+        }
+        &-2 {
+            height: 2767px;
+        }
+        &-3 {
+            height: 2522px;
+        }
+        &-4 {
+            height: 864px;
+        }
+        &-5 {
+            height: 545px;
+        }
+        &-6 {
+            height: 1174px;
+        }
+        &-7 {
+            height: 1900px;
+        }
+        &-8 {
+            height: 1700px;
+        }
+        &-9 {
+            height: 824px;
+        }
+        &-10 {
+            height: 3168px;
+        }
+        &-11 {
+            height: 1160px;
+        }
+    
+    }
 }
 .hadalpelagic {
+    // background-color: #000;
     height: calc(5000 * 10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 15px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .container {
+        &:first-of-type {
+            flex: 1;
+        }
+        &:last-of-type {
+            flex: 0;
+        }
+    }
     &-title {
         color: #fff;
     }
@@ -212,5 +501,51 @@ section {
         position: absolute;
         transform: translateY(50%);
         background-color: #00ff8c;
+    }
+    .level {
+        &-0 {
+            height: 340px;
+        }
+        &-1 {
+            height: 1667px;
+        }
+        &-2 {
+            height: 969px;
+        }
+        &-3 {
+            height: 1400px;
+        }
+        &-4 {
+            height: 169px;
+        }
+        &-5 {
+            height: 466px;
+        }
+        &-6 {
+            height: 15461px;
+        }
+        &-7 {
+            height: 4018px;
+        }
+        &-8 {
+            height: 2080px;
+        }
+        &-9 {
+            height: 22405px;
+        }
+        &-10 {
+            height: 50px;
+        }
+        &-11 {
+            height: 327px;
+        }
+        &-12 {
+            // height: 623px;
+            height: 400px;
+        }
+    
+    }
+    &-bottom {
+        // position: ;
     }
 }
