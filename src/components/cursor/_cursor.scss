@@ -1,0 +1,42 @@
+/* CURSOR */
+
+.cursorPoint {
+    display: block;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    top: -5px;
+    left: -5px;
+    /* transform: translate(-50%); */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 111;
+    transition: all 0.2s ease-out;
+}
+
+.expand {
+    background: transparent;
+    border: 1px solid #000;
+}
+
+.ball {
+    pointer-events: none;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    // background: #fff;
+    animation: implode 1s ease-in-out;
+    animation-fill-mode: both;
+    // mix-blend-mode: difference;
+    // background: rgba(128,185,228,1);
+    box-shadow: 0 0.7px 3px  #fff;
+}
+
+@keyframes implode {
+    100% {
+        transform: scale(0);
+    }
+}

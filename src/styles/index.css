@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
 *,
 *:after,
 *:before {
@@ -271,23 +272,47 @@ img {
   justify-content: space-evenly;
 }
 .hero-title {
-  max-width: 900px;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  min-height: 40vh;
+  font-family: Nunito;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 100%;
+}
+.hero-title .row-wrapper {
+  position: relative;
+}
+.hero-title .row {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.hero-title .row-1 {
+  color: transparent;
+  color: rgb(128, 185, 228);
+  -webkit-text-stroke: 2px #fff;
+}
+.hero-title .row-2 {
+  animation: wave 4s ease-in-out infinite;
+}
+@keyframes wave {
+  /* start point */
+  0%, 100% {
+    -webkit-clip-path: polygon(0% 46%, 17% 45%, 34% 50%, 56% 61%, 69% 62%, 86% 60%, 100% 51%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 46%, 17% 45%, 34% 50%, 56% 61%, 69% 62%, 86% 60%, 100% 51%, 100% 100%, 0% 100%);
+  }
+  /* Mid point */
+  50% {
+    -webkit-clip-path: polygon(0% 59%, 16% 64%, 33% 65%, 52% 61%, 70% 52%, 85% 47%, 100% 48%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 59%, 16% 64%, 33% 65%, 52% 61%, 70% 52%, 85% 47%, 100% 48%, 100% 100%, 0% 100%);
+  }
 }
 .hero-title span {
-  padding: 0 3%;
-  transition: transform 0.3s ease-out;
+  display: inline-block;
+  padding: 0 10px;
 }
 .hero-description {
   max-width: 260px;
@@ -302,23 +327,22 @@ img {
   }
 }
 .hero-bottom {
-  margin-bottom: 5rem;
-}
-@media screen and (min-width: 768px) {
-  .hero-bottom {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 2rem;
+  position: relative;
 }
 .hero-bottom .image-group {
   display: flex;
   flex-direction: column;
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
 }
+.hero-bottom .image-group:hover img {
+  transform: translateY(5px);
+}
 .hero-bottom img {
   width: 20px;
+  transition: all 0.3s ease;
 }
 .hero-bottom img:first-of-type {
   margin-bottom: -11px;
@@ -576,7 +600,6 @@ img {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   vertical-align: middle;
   -moz-appearance: none;
@@ -735,14 +758,8 @@ img {
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
-  -webkit-animation: ripple 1s linear forwards;
-          animation: ripple 1s linear forwards;
+  animation: ripple 1s linear forwards;
   transition: background-color 1s ease-out;
-}
-@-webkit-keyframes ripple {
-  to {
-    transform: scale(4);
-  }
 }
 @keyframes ripple {
   to {
@@ -760,7 +777,6 @@ img {
 .btn span svg {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   width: 1em;
   height: 1em;
@@ -803,9 +819,6 @@ img {
   color: rgba(248, 249, 250,1);
 }
 .form-control-light::-moz-placeholder {
-  color: rgba(248, 249, 250,0.5);
-}
-.form-control-light:-ms-input-placeholder {
   color: rgba(248, 249, 250,0.5);
 }
 .form-control-light::placeholder {
@@ -1089,7 +1102,6 @@ label {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   pointer-events: auto;
 }
@@ -1247,6 +1259,21 @@ label {
   color: rgb(255, 255, 255);
   letter-spacing: 0.03rem;
   border-top: 1px solid rgb(255, 255, 255);
+  position: relative;
+}
+.zone:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.zone:hover:after {
+  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .zone {
@@ -1300,7 +1327,6 @@ label {
 .swiper {
   text-align: center;
   height: 100vh;
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
@@ -1326,8 +1352,7 @@ label {
   color: #fff;
   font-size: 0.8rem;
   text-decoration: underline;
-  -webkit-text-decoration-color: rgba(255, 255, 255, 0.5);
-          text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-decoration-color: rgba(255, 255, 255, 0.5);
 }
 @media screen and (min-width: 768px) {
   .swiper a {
@@ -1335,8 +1360,7 @@ label {
   }
 }
 .swiper a:hover {
-  -webkit-text-decoration-color: #fff;
-          text-decoration-color: #fff;
+  text-decoration-color: #fff;
 }
 .swiper a.link-sm {
   font-size: 1rem;
@@ -1345,7 +1369,6 @@ label {
 .swiper-custom-wrapper {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   position: relative;
 }
@@ -1396,6 +1419,44 @@ label {
   pointer-events: none;
 }
 
+/* CURSOR */
+.cursorPoint {
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  background-color: #fff;
+  mix-blend-mode: difference;
+  top: -5px;
+  left: -5px;
+  /* transform: translate(-50%); */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 111;
+  transition: all 0.2s ease-out;
+}
+
+.expand {
+  background: transparent;
+  border: 1px solid #000;
+}
+
+.ball {
+  pointer-events: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: implode 1s ease-in-out;
+  animation-fill-mode: both;
+  box-shadow: 0 0.7px 3px #fff;
+}
+
+@keyframes implode {
+  100% {
+    transform: scale(0);
+  }
+}
 body {
   background-color: #000;
 }
@@ -1465,6 +1526,10 @@ section .container {
 .level {
   overflow: hidden;
   min-height: 200px;
+}
+.level > .content,
+.level .parallax {
+  display: none;
 }
 .level-content {
   display: none;
@@ -1891,7 +1956,7 @@ section .level h3 {
 [data-lazy] {
   opacity: 0;
   will-change: transform, opacity;
-  transition-property: opacity, transform !important;
+  transition-property: opacity, transform, width !important;
   transition-timing-function: ease-in, ease-out !important;
   transition-duration: 0.7s !important;
 }
@@ -1919,6 +1984,9 @@ section .level h3 {
 .lazy-animate {
   opacity: 1;
   transform: translateZ(0);
+}
+.lazy-animate.chunk:after {
+  transform: translateX(100%);
 }
 
 @font-face {

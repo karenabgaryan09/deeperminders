@@ -7,19 +7,24 @@
         <title>Deeperminers</title>
         <link rel="icon" href="./src/assets/images/favicon.png" />
         <meta name="keywords" content="website, template, sample" />
-        <meta name="description" content="this sample created for prototyping purpoces" />
+        <meta name="description" content="mine the deep sea" />
         <meta name="author" content="Jonathan Poston" />
         <!-- OPEN GRAPH -->
-        <meta property="og:title" content="Sample" />
+        <meta property="og:title" content="Deeperminers" />
+        <meta property="og:site_name" content="site name" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="this sample created for prototyping purposes" />
-        <meta property="og:image" content="./src/assets/images/og.png" />
-        <meta property="og:url" content="https://sample.com" />
+        <meta property="og:description" content="mine the deep sea" />
+        <meta property="og:image" content="/src/assets/images/og.png" />
+        <meta property="og:url" content="https://deeperminers.com" />
+        <!-- <meta property="og:image:secure_url" content="/src/assets/images/og.png" /> -->
+        <!-- <meta property="og:image:type" content="image/png" /> -->
+        <!-- <meta property="og:image:width" content="400" /> -->
+        <!-- <meta property="og:image:height" content="300" /> -->
         <!-- TWITTER CARDS -->
-        <meta name="twitter:title" content="Sample" />
-        <meta name="twitter:description" content="this sample created for prototyping purposes" />
-        <meta name="twitter:image" content="./src/assets/images/og.png" />
-        <meta name="twitter:url" content="https://sample.com" />
+        <meta name="twitter:title" content="Deeperminers" />
+        <meta name="twitter:description" content="mine the deep sea" />
+        <meta name="twitter:image" content="https://deeperminers.com/src/assets/images/og.png" />
+        <meta name="twitter:url" content="https://deeperminers.com" />
         <meta name="twitter:card" content="summary" />
         <!-- STYLESHEET -->
         <link rel="stylesheet" href="./src/styles/index.css" />
@@ -37,6 +42,7 @@
         <script src="/src/components/swiper/swiper.js" defer></script>
     </head>
     <body>
+        <img src="/src/assets/images/og.png" style="display: none" alt="" />
         <div class="line">
             <svg class="line-svg" viewBox="0 0 381 5873" fill="none" preserveAspectRatio="xMidYMax meet">
                 <path
@@ -46,7 +52,7 @@
                 />
             </svg>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <button
                     class="navbar-toggler collapsed"
@@ -427,11 +433,21 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <header class="hero" id="hero" data-lazy-block>
             <div class="container-fluid">
-                <h1 class="display-1 hero-title">
+                <!-- <h1 class="display-1 hero-title">
                     Mine <span class="text-dark" > The </span>  Deep Sea
+                </h1> -->
+                <h1 class="display-1 hero-title">
+                    <!-- <div data-lazy="fade-width" >dive</div>
+                    <div data-lazy="fade-width" >deeper</div> -->
+                    <!-- Mine <span class="bg-dark">The</span> <br /> -->
+                    Mine The
+                    <div class="row-wrapper">
+                        <div class="row row-1">deep Sea</div>
+                        <div class="row row-2">deep Sea</div>
+                    </div>
                 </h1>
                 <img class="ship" data-lazy="fade-right" src="/src/assets/images/minerals/empty.png" alt="" />
 
@@ -487,35 +503,35 @@
                 </div>
                 <div class="drawer drawer-right" id="drawer-right">
                     <div class="zones">
-                        <div class="zone zone-epipelagic">
+                        <a href="#epipelagic" class="zone zone-epipelagic">
                             <div class="zone-name">epipelagic</div>
                             <div class="zone-depth">200m</div>
-                        </div>
-                        <div class="zone zone-mesopelagic">
+                        </a>
+                        <a href="#mesopelagic" class="zone zone-mesopelagic">
                             <div class="zone-name">mesopelagic</div>
                             <div class="zone-depth">1000m</div>
-                        </div>
-                        <div class="zone zone-bathypelagic">
+                        </a>
+                        <a href="#bathypelagic" class="zone zone-bathypelagic">
                             <div class="zone-name">bathypelagic</div>
                             <div class="zone-depth">4000m</div>
-                        </div>
-                        <div class="zone zone-abyssopelagic">
+                        </a>
+                        <a href="#abyssopelagic" class="zone zone-abyssopelagic">
                             <div class="zone-name">abyssopelagic</div>
                             <div class="zone-depth">6000m</div>
-                        </div>
-                        <div class="zone zone-hadalpelagic">
+                        </a>
+                        <a href="#hadalpelagic" class="zone zone-hadalpelagic">
                             <div class="zone-name">hadalpelagic</div>
                             <div class="zone-depth">11000m</div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="hero-bottom">
                 <h2 class="display-6 hero-description">by scrolling down</h2>
-                <div class="image-group">
+                <a href="#epipelagic" class="image-group">
                     <img src="/src/assets/images/icons/chevron-down-light.svg" alt="" />
                     <img src="/src/assets/images/icons/chevron-down.svg" alt="" />
-                </div>
+                </a>
             </div>
         </header>
         <main class="scroll-element scroll-content">
@@ -636,31 +652,33 @@
                         <h3 class="display-6" data-lazy="fade-up">
                             swordfish, shrimp, and hatchet fish are swiming around
                         </h3>
-                        <div
-                            class="image-wrapper parallax"
-                            data-parallax="true"
-                            data-parallax-speed="0.03"
-                            data-lazy="fade-up"
-                        >
-                            <div class="image" data-parallax-inner data-parallax-glare="true">
-                                <img
-                                    src="/src/assets/images/preloader.gif"
-                                    data-src="/src/assets/images/minerals/hatchet.png"
-                                    alt=""
-                                />
-                                <div class="image-name">hatchet</div>
-                                <img
-                                    src="/src/assets/images/preloader.gif"
-                                    data-src="/src/assets/images/minerals/shrimp.png"
-                                    alt=""
-                                />
-                                <div class="image-name">shrimp</div>
-                                <img
-                                    src="/src/assets/images/preloader.gif"
-                                    data-src="/src/assets/images/minerals/swordfish.png"
-                                    alt=""
-                                />
-                                <div class="image-name">swordfish</div>
+                        <div class="level-content content content-center">
+                            <div
+                                class="image-wrapper parallax"
+                                data-parallax="true"
+                                data-parallax-speed="0.03"
+                                data-lazy="fade-up"
+                            >
+                                <div class="image" data-parallax-inner data-parallax-glare="true">
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/hatchet.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">hatchet</div>
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/shrimp.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">shrimp</div>
+                                    <img
+                                        src="/src/assets/images/preloader.gif"
+                                        data-src="/src/assets/images/minerals/swordfish.png"
+                                        alt=""
+                                    />
+                                    <div class="image-name">swordfish</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1894,8 +1912,10 @@
                     <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
             </div>
+            <canvas class="page__canvas fullHeight"></canvas>
         </footer>
         <script>
+
             document.querySelectorAll("[data-src]").forEach((image) => {
                 image.setAttribute("data-src", "/src/assets/images/minerals/empty.png");
             });
@@ -1914,5 +1934,9 @@
                 speed: 500,
             });
         </script>
+
+        <!-- CURSOR ANIMATION  -->
+        <script src="./src/scripts/jquery.js"></script>
+        <script src="./src/components/cursor/cursor.js"></script>
     </body>
 </html>

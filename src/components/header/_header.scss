@@ -47,34 +47,105 @@
     &-content {
     }
     &-title {
-        // position: absolute;
-        // top: 35%;
-        // left: 30%;
-
-        max-width: 900px;
+        text-shadow: 0 3px 3px rgba(0,0,0,0.3);
+        // max-width: 900px;
+        min-height: 40vh;
+        font-family: Nunito;
         text-align: center;
         text-transform: uppercase;
         color: #fff;
-        display: flex;
-        // font-size: 4vw;
-        width: fit-content;
         margin: 0 auto;
-        text-align: center;
-        // transition: transform .1s linear;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        // top: 50%;
-        // left: 0;
-        // transform: translateY(-50%);
-        // transition: 1s ease-in;
-        // position: absolute;
-        span {
-            // margin: 0 3rem;
-            padding: 0 3%;
-            transition: transform 0.3s ease-out;
-            // display: block;
+        // line-height: 0.9;
+        width: 100%;
+        .row-wrapper {
+            position: relative;
+
         }
+        .row {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            &-1 {
+                color: transparent;
+                color: rgba(128,185,228,1);
+                -webkit-text-stroke: 2px #fff;
+            }
+            &-2 {
+                animation: wave 4s ease-in-out infinite;
+            }
+        }
+        @keyframes wave {
+            /* start point */
+            0%,
+            100% {
+              clip-path: polygon(
+                0% 46%,
+                17% 45%,
+                34% 50%,
+                56% 61%,
+                69% 62%,
+                86% 60%,
+                100% 51%,
+                100% 100%,
+                0% 100%
+              );
+            }
+            /* Mid point */
+            50% {
+              clip-path: polygon(
+                0% 59%,
+                16% 64%,
+                33% 65%,
+                52% 61%,
+                70% 52%,
+                85% 47%,
+                100% 48%,
+                100% 100%,
+                0% 100%
+              );
+            }
+          }
+        span {
+            display:inline-block;
+            padding: 0 10px;
+            // padding: 0 0.8rem 2rem;
+        };
+        // max-width: 1000px;
+        // .chunk {
+        //     background-color: color(dark);
+        //     // margin: 0 3rem;
+        //     // padding: 0 3%;
+        //     padding: 0 15px;
+        //     width: fit-content;
+        //     transition: transform 0.3s ease-out;
+        //     // display: block;
+        //     margin-bottom: 1rem;
+        //     border-radius: 10px;
+        //     // overflow: hidden;
+        //     display: block;
+        //     position: relative;
+        //     overflow: hidden;
+        //     &:after {
+        //         content: '';
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         width: 100%;
+        //         height: 100%;
+        //         background: rgb(128,185,228);
+        //         transition: 3s ease;
+        //     }
+        // }
+        // .first-chunk {
+
+        // }
+        // .second-chunk {
+        //     &:after {
+
+        //         transition-delay:  .5s !important;
+        //     }
+        // }
     }
     &-description {
         max-width: 260px;
@@ -90,22 +161,33 @@
   
     }
     &-bottom {
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
+        // margin-bottom: 5rem;
+        position: relative;
         @include mq(768px) {
-            margin-bottom: 2rem;
+            // margin-bottom: 2rem;
         }
         .image-group {
             display: flex;
             flex-direction: column;
             max-width: fit-content;
             margin: 0 auto;
+            &:hover {
+                img {
+                    transform: translateY(5px);
+                }
+            }
         }
+
         img {
             width: 20px;
+            transition: all .3s ease;
             &:first-of-type {
                 margin-bottom: -11px;
             }
         }
+
+      
     }
     .ship {
         position: relative;

@@ -96,6 +96,10 @@ section {
     // padding-top: 100px;
     overflow: hidden;
     min-height: 200px;
+    & > .content,
+    .parallax {
+        display: none;
+    }
     &-content {
         display: none;
         // text-align: center;
